@@ -1,5 +1,6 @@
 package pz.recipes.recipes.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -15,13 +16,20 @@ public class Fridge implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @JsonIgnore
     private Long id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne()
+    @JsonIgnore
     private User user;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER)
     private Ingredient ingredient;
+
+    public Fridge(User user, Ingredient ingredient) {
+        this.user = user;
+        this.ingredient = ingredient;
+    }
 
     public Long getId() {
         return id;

@@ -6,7 +6,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import pz.recipes.recipes.MessageResponse;
-import pz.recipes.recipes.domain.Ingredient;
 import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.recipes.dto.RecipeRequest;
 import pz.recipes.recipes.recipes.dto.RecipeResponse;
