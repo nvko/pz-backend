@@ -8,12 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d22b26e8-ea59-4908-8854-f57918930004" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/find/controller/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/find/service/SearchService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/RecipeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/RecipeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/travis.yml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -75,7 +70,7 @@
         <entry file="file://$PROJECT_DIR$/travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+              <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -253,7 +248,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557859203501" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557859837715" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/find" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -350,12 +345,12 @@
       <workItem from="1557449135033" duration="17229000" />
       <workItem from="1557694832354" duration="4920000" />
       <workItem from="1557777776706" duration="9320000" />
-      <workItem from="1557831294837" duration="3223000" />
+      <workItem from="1557831294837" duration="3857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="192147000" />
+    <option name="totallyTimeSpent" value="192781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,7 +875,7 @@
     <entry file="file://$PROJECT_DIR$/travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+          <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
         </state>
       </provider>
     </entry>
