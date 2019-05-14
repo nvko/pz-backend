@@ -18,7 +18,7 @@ public class UserController {
     @GetMapping("")
     public ResponseEntity<?> getUsers(@RequestParam(value = "page", defaultValue = "1") int page,
                                       @RequestParam(value = "limit", defaultValue = "10", required = false) int limit,
-                                      @RequestParam(value = "sort", required = false, defaultValue = "id") String sort) { //TODO: sort
+                                      @RequestParam(value = "sort", required = false, defaultValue = "id") String sort) {
         return new ResponseEntity<>(userService.findAll(page, limit, sort), HttpStatus.OK);
     }
 
