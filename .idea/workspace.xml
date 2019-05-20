@@ -8,60 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d22b26e8-ea59-4908-8854-f57918930004" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/controller/SearchController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/dto/SearchResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.travis.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.travis.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/controller/AccountController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/controller/AccountController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/service/AccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/service/AccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Fridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Fridge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Ingredient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/find/controller/SearchController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/find/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/service/SearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/controller/FridgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/controller/FridgeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/service/FridgeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/service/FridgeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/controller/IngredientsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/controller/IngredientsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/dto/IngredientRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/dto/IngredientsRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/dto/IngredientResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/dto/IngredientsResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/service/IngredientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/service/IngredientsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/controller/RecipeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/controller/RecipesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/dto/RecipeRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/dto/RecipesRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/dto/RecipeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/dto/RecipesResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/service/RecipeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/service/RecipesService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/register/controller/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/register/controller/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/register/service/RegisterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/register/service/RegisterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/RecipeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/RecipesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/UsersRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/security/UserDetailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/security/UserDetailService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/controller/UsersController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/service/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/account/controller/AccountController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/account/controller/AccountController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/account/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/account/service/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Fridge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Fridge.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Ingredient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Ingredient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/fridge/controller/FridgeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/fridge/controller/FridgeController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/fridge/service/FridgeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/fridge/service/FridgeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/ingredients/controller/IngredientsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/ingredients/controller/IngredientsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/ingredients/dto/IngredientRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/ingredients/dto/IngredientResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/ingredients/service/IngredientService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/login/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/login/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/recipes/controller/RecipeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/recipes/dto/RecipeRequest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/recipes/dto/RecipeResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/recipes/service/RecipeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/register/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/register/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/register/service/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/register/service/RegisterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/repository/IngredientRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/repository/RecipeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/repository/UserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/security/UserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/security/UserDetailService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/users/controller/UserController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/users/service/UserService.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -129,11 +76,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.travis.yml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="204">
-              <caret line="12" column="85" lean-forward="true" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
+              <caret line="12" column="63" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="841">
+              <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -197,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/dto/IngredientResponse.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/RecipeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/controller/RecipeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/RecipeRequest.java" />
@@ -248,6 +203,7 @@
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/RecipesRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/service/SearchService.java" />
         <option value="$PROJECT_DIR$/.travis.yml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -258,7 +214,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1040" />
@@ -514,12 +470,12 @@
       <workItem from="1557866626333" duration="319000" />
       <workItem from="1557867537054" duration="6445000" />
       <workItem from="1557924239518" duration="590000" />
-      <workItem from="1558378079773" duration="111000" />
+      <workItem from="1558378079773" duration="286000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="201118000" />
+    <option name="totallyTimeSpent" value="201293000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -573,17 +529,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/register/dto/RegisterRequest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="31" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
-          <folding>
-            <element signature="e#463#464#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/dto/LoginRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -1053,7 +998,14 @@
     <entry file="file://$PROJECT_DIR$/.travis.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="12" column="85" lean-forward="true" selection-start-line="12" selection-start-column="85" selection-end-line="12" selection-end-column="85" />
+          <caret line="12" column="63" selection-start-line="12" selection-start-column="62" selection-end-line="12" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="841">
+          <caret line="92" column="21" selection-start-line="92" selection-start-column="21" selection-end-line="92" selection-end-column="21" />
         </state>
       </provider>
     </entry>
