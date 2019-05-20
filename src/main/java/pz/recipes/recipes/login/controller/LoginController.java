@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import pz.recipes.recipes.login.dto.LoginRequest;
 import pz.recipes.recipes.login.service.LoginService;
-import pz.recipes.recipes.users.service.UserService;
 
 import javax.validation.Valid;
 

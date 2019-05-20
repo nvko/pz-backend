@@ -32,7 +32,7 @@ public class Ingredient implements Serializable {
         this.vege = vege;
     }
 
-    @OneToMany(fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "ingredient", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JsonIgnore
     private Set<Fridge> fridge;
 
@@ -56,4 +56,11 @@ public class Ingredient implements Serializable {
         this.vege = vege;
     }
 
+    public Set<Fridge> getFridge() {
+        return fridge;
+    }
+
+    public void setFridge(Set<Fridge> fridge) {
+        this.fridge = fridge;
+    }
 }

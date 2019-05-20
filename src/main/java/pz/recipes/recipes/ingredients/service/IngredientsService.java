@@ -3,19 +3,14 @@ package pz.recipes.recipes.ingredients.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import pz.recipes.recipes.domain.Ingredient;
-import pz.recipes.recipes.ingredients.dto.IngredientRequest;
-import pz.recipes.recipes.repository.IngredientRepository;
+import pz.recipes.recipes.ingredients.dto.IngredientsRequest;
+import pz.recipes.recipes.repository.IngredientsRepository;
 
 @Service
-public class IngredientService {
+public class IngredientsService {
 
     @Autowired
-    private IngredientRepository ingredientRepository;
-
-    //TODO: find route
-//    public List<Ingredient> findByQuery(@Param("query") String query) {
-//        return ingredientRepository.findByQuery(query);
-//    }
+    private IngredientsRepository ingredientRepository;
 
     public void addIngredient(String name, boolean isVege) {
         ingredientRepository.save(new Ingredient(name, isVege));
@@ -40,7 +35,7 @@ public class IngredientService {
         }
     }
 
-    public void updateIngredient(Long id, IngredientRequest ingredientRequest) {
+    public void updateIngredient(Long id, IngredientsRequest ingredientRequest) {
         Ingredient ingredient = findById(id);
         ingredient.setName(ingredientRequest.getName());
         ingredient.setVege(ingredientRequest.getVege());

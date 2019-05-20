@@ -4,7 +4,7 @@ import pz.recipes.recipes.domain.Ingredient;
 
 import java.util.Set;
 
-public class RecipeRequest {
+public class RecipesRequest {
 
     private String title;
     private String description;

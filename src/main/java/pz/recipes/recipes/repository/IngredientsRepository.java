@@ -7,7 +7,7 @@ import pz.recipes.recipes.domain.Ingredient;
 import java.util.List;
 
 @Repository
-public interface IngredientRepository extends JpaRepository<Ingredient, Long> {
+public interface IngredientsRepository extends JpaRepository<Ingredient, Long> {
 
 //    @Query("SELECT i FROM Ingredient i WHERE name LIKE :query")
 //    List<Ingredient> findByQuery(@Param("query") String query);

@@ -5,13 +5,13 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 import pz.recipes.recipes.domain.User;
-import pz.recipes.recipes.repository.UserRepository;
+import pz.recipes.recipes.repository.UsersRepository;
 
 @Service
 public class UserDetailService implements UserDetailsService {
-    private UserRepository userRepository;
+    private UsersRepository userRepository;
 
-    public UserDetailService(UserRepository userRepository) {
+    public UserDetailService(UsersRepository userRepository) {
         this.userRepository = userRepository;
     }
 

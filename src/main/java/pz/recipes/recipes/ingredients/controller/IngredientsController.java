@@ -6,8 +6,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import pz.recipes.recipes.MessageResponse;
-import pz.recipes.recipes.ingredients.dto.IngredientRequest;
-import pz.recipes.recipes.ingredients.service.IngredientService;
+import pz.recipes.recipes.ingredients.dto.IngredientsRequest;
+import pz.recipes.recipes.ingredients.service.IngredientsService;
 
 import javax.validation.Valid;
 
@@ -16,11 +16,11 @@ import javax.validation.Valid;
 public class IngredientsController {
 
     @Autowired
-    private IngredientService ingredientService;
+    private IngredientsService ingredientService;
 
     // admin adds to ingredients, TODO: user adds to suggestions
     @PostMapping("")
-    public ResponseEntity<?> addIngredient(Authentication authentication, @RequestBody IngredientRequest ingredientRequest) {
+    public ResponseEntity<?> addIngredient(Authentication authentication, @RequestBody IngredientsRequest ingredientRequest) {
         if (authentication.getAuthorities().toString().equals("[ROLE_ADMIN]")) {
             if (ingredientService.hasIngredient(ingredientRequest.getName())) {
                 return new ResponseEntity<>(new MessageResponse("This ingredient already exists"), HttpStatus.CONFLICT);
@@ -32,12 +32,6 @@ public class IngredientsController {
             return new ResponseEntity<>(new MessageResponse("You are not authorized to add new ingredients."), HttpStatus.UNAUTHORIZED);
         }
     }
-
-    //TODO: create find controller for ingredients and recipes
-//    @GetMapping("/{query}")
-//    public ResponseEntity<?> getByQuery(@PathVariable(name = "query") String query) {
-//        return new ResponseEntity<>(new IngredientResponse(ingredientService.findByQuery(query)), HttpStatus.OK);
-//    }
 
     @GetMapping("/{id}")
     public ResponseEntity<?> findById(@PathVariable(name = "id") Long id) {
@@ -60,7 +54,7 @@ public class IngredientsController {
 
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateIngredient(Authentication authentication, @PathVariable(name = "id") Long id, @Valid @RequestBody IngredientRequest ingredientRequest) {
+    public ResponseEntity<?> updateIngredient(Authentication authentication, @PathVariable(name = "id") Long id, @Valid @RequestBody IngredientsRequest ingredientRequest) {
         if (authentication.getAuthorities().toString().equals("[ROLE_ADMIN]")) {
             if (ingredientService.hasIngredient(id)) {
                 ingredientService.updateIngredient(id, ingredientRequest);

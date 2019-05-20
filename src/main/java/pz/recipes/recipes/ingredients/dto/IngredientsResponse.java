@@ -4,11 +4,11 @@ import pz.recipes.recipes.domain.Ingredient;
 
 import java.util.List;
 
-public class IngredientResponse {
+public class IngredientsResponse {
 
     private List<Ingredient> ingredients;
 
-    public IngredientResponse(List<Ingredient> ingredients) {
+    public IngredientsResponse(List<Ingredient> ingredients) {
         this.ingredients = ingredients;
     }
 

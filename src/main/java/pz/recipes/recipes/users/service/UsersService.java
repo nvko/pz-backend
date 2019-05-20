@@ -3,19 +3,17 @@ package pz.recipes.recipes.users.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.repository.Query;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 import pz.recipes.recipes.domain.User;
-import pz.recipes.recipes.repository.UserRepository;
+import pz.recipes.recipes.repository.UsersRepository;
 
 import java.util.List;
 
 @Service
-public class UserService {
+public class UsersService {
 
     @Autowired
-    private UserRepository userRepository;
+    private UsersRepository userRepository;
 
     public User findById(Long id) {
         return userRepository.findById(id).orElse(null);

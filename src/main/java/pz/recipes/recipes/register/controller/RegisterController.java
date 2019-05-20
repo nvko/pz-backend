@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pz.recipes.recipes.MessageResponse;
 import pz.recipes.recipes.register.dto.RegisterRequest;
 import pz.recipes.recipes.register.service.RegisterService;
-import pz.recipes.recipes.users.service.UserService;
+import pz.recipes.recipes.users.service.UsersService;
 
 @RestController
 @RequestMapping("register")
@@ -18,7 +18,7 @@ public class RegisterController {
     @Autowired
     private RegisterService registerService;
     @Autowired
-    private UserService userService;
+    private UsersService userService;
 
     @PostMapping("")
     public ResponseEntity<?> register(@RequestBody RegisterRequest registerRequest) {

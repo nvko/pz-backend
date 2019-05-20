@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import pz.recipes.recipes.MessageResponse;
 import pz.recipes.recipes.account.dto.AccountRequest;
 import pz.recipes.recipes.account.service.AccountService;
-import pz.recipes.recipes.users.service.UserService;
+import pz.recipes.recipes.users.service.UsersService;
 
 @RestController
 @RequestMapping("account")
@@ -17,7 +17,7 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
     @Autowired
-    private UserService userService;
+    private UsersService userService;
 
     // if user is vege/non-vege then if he calls this route then user's diet will switch to non-vege/vege
     @PutMapping("/diet")

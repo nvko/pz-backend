@@ -9,16 +9,16 @@ import pz.recipes.recipes.MessageResponse;
 import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.fridge.dto.FridgeResponse;
 import pz.recipes.recipes.fridge.service.FridgeService;
-import pz.recipes.recipes.ingredients.service.IngredientService;
-import pz.recipes.recipes.users.service.UserService;
+import pz.recipes.recipes.ingredients.service.IngredientsService;
+import pz.recipes.recipes.users.service.UsersService;
 
 @RestController
 @RequestMapping("/fridge")
 public class FridgeController {
 
     @Autowired FridgeService fridgeService;
-    @Autowired UserService userService;
-    @Autowired IngredientService ingredientService;
+    @Autowired UsersService userService;
+    @Autowired IngredientsService ingredientService;
 
     @GetMapping("")
     public ResponseEntity<?> getFridge(Authentication authentication) {

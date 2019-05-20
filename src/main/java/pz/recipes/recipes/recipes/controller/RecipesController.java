@@ -7,23 +7,23 @@ import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import pz.recipes.recipes.MessageResponse;
 import pz.recipes.recipes.domain.User;
-import pz.recipes.recipes.recipes.dto.RecipeRequest;
-import pz.recipes.recipes.recipes.dto.RecipeResponse;
-import pz.recipes.recipes.recipes.service.RecipeService;
-import pz.recipes.recipes.users.service.UserService;
+import pz.recipes.recipes.recipes.dto.RecipesRequest;
+import pz.recipes.recipes.recipes.dto.RecipesResponse;
+import pz.recipes.recipes.recipes.service.RecipesService;
+import pz.recipes.recipes.users.service.UsersService;
 
 @RequestMapping("recipes")
 @RestController
-public class RecipeController {
+public class RecipesController {
 
-    @Autowired RecipeService recipeService;
-    @Autowired UserService userService;
+    @Autowired RecipesService recipeService;
+    @Autowired UsersService userService;
 
     @GetMapping("")
     public ResponseEntity<?> getRecipes(@RequestParam(value = "page", defaultValue = "1") int page,
                                         @RequestParam(value = "limit", defaultValue = "10", required = false) int limit,
                                         @RequestParam(value = "sort", defaultValue = "id") String sort) {
-        return new ResponseEntity<>(new RecipeResponse(recipeService.getRecipes(page, limit, sort)), HttpStatus.OK);
+        return new ResponseEntity<>(new RecipesResponse(recipeService.getRecipes(page, limit, sort)), HttpStatus.OK);
     }
 
     @GetMapping("/{id}")
@@ -32,7 +32,7 @@ public class RecipeController {
     }
 
     @PostMapping("")
-    public ResponseEntity addRecipe(Authentication authentication, @RequestBody RecipeRequest recipeRequest) {
+    public ResponseEntity addRecipe(Authentication authentication, @RequestBody RecipesRequest recipeRequest) {
         if (recipeRequest.hasSomethingNull()) {
             return new ResponseEntity<>(new MessageResponse("Request is invalid"), HttpStatus.CONFLICT);
         } else {
@@ -47,7 +47,7 @@ public class RecipeController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updateRecipe(Authentication authentication, @PathVariable(name = "id") Long id, @RequestBody RecipeRequest recipeRequest) {
+    public ResponseEntity<?> updateRecipe(Authentication authentication, @PathVariable(name = "id") Long id, @RequestBody RecipesRequest recipeRequest) {
         if (recipeRequest.hasSomethingNull()) {
             return new ResponseEntity<>(new MessageResponse("Request is invalid"), HttpStatus.CONFLICT);
         } else {

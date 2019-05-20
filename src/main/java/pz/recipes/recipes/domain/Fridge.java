@@ -23,7 +23,7 @@ public class Fridge implements Serializable {
     @JsonIgnore
     private User user;
 
-    @ManyToOne(fetch = FetchType.EAGER)
+    @ManyToOne()
     private Ingredient ingredient;
 
     public Fridge(User user, Ingredient ingredient) {

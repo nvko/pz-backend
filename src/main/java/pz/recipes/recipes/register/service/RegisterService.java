@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 import pz.recipes.recipes.domain.Role;
 import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.register.dto.RegisterRequest;
-import pz.recipes.recipes.repository.UserRepository;
+import pz.recipes.recipes.repository.UsersRepository;
 
 import java.util.Collections;
 
@@ -14,7 +14,7 @@ import java.util.Collections;
 public class RegisterService {
 
     @Autowired
-    private UserRepository userRepository;
+    private UsersRepository userRepository;
     @Autowired
     private PasswordEncoder passwordEncoder;
 

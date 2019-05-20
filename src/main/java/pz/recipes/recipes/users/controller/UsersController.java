@@ -4,16 +4,16 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pz.recipes.recipes.users.service.UserService;
+import pz.recipes.recipes.users.service.UsersService;
 
 import static org.springframework.http.ResponseEntity.ok;
 
 @RestController
 @RequestMapping("users")
-public class UserController {
+public class UsersController {
 
     @Autowired
-    private UserService userService;
+    private UsersService userService;
 
     @GetMapping("")
     public ResponseEntity<?> getUsers(@RequestParam(value = "page", defaultValue = "1") int page,

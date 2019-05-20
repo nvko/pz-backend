@@ -1,6 +1,6 @@
 package pz.recipes.recipes.ingredients.dto;
 
-public class IngredientRequest {
+public class IngredientsRequest {
 
     private String name;
     private Boolean isVege;

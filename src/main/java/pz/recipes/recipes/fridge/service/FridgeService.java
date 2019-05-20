@@ -6,7 +6,7 @@ import pz.recipes.recipes.domain.Fridge;
 import pz.recipes.recipes.domain.Ingredient;
 import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.repository.FridgeRepository;
-import pz.recipes.recipes.repository.IngredientRepository;
+import pz.recipes.recipes.repository.IngredientsRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -15,7 +15,7 @@ import java.util.List;
 public class FridgeService {
 
     @Autowired FridgeRepository fridgeRepository;
-    @Autowired IngredientRepository ingredientRepository;
+    @Autowired IngredientsRepository ingredientRepository;
 
     public List<Fridge> findByUser(User user) {
         return fridgeRepository.findAllByUser(user);

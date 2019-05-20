@@ -3,28 +3,27 @@ package pz.recipes.recipes.recipes.service;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import pz.recipes.recipes.domain.Ingredient;
 import pz.recipes.recipes.domain.Recipe;
 import pz.recipes.recipes.domain.RecipeIngredients;
 import pz.recipes.recipes.domain.User;
-import pz.recipes.recipes.ingredients.service.IngredientService;
-import pz.recipes.recipes.recipes.dto.RecipeRequest;
+import pz.recipes.recipes.ingredients.service.IngredientsService;
+import pz.recipes.recipes.recipes.dto.RecipesRequest;
 import pz.recipes.recipes.repository.RecipeIngredientsRepository;
-import pz.recipes.recipes.repository.RecipeRepository;
-import pz.recipes.recipes.repository.UserRepository;
+import pz.recipes.recipes.repository.RecipesRepository;
+import pz.recipes.recipes.repository.UsersRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
-public class RecipeService {
+public class RecipesService {
 
-    @Autowired RecipeRepository recipeRepository;
-    @Autowired UserRepository userRepository;
+    @Autowired RecipesRepository recipeRepository;
+    @Autowired UsersRepository userRepository;
     @Autowired RecipeIngredientsRepository recipeIngredientsRepository;
-    @Autowired IngredientService ingredientService;
+    @Autowired IngredientsService ingredientService;
 
     public Recipe findById(Long id) {
         return recipeRepository.findById(id).get();
@@ -34,13 +33,13 @@ public class RecipeService {
         return recipeRepository.findAll(PageRequest.of(page, limit, Sort.by(sort))).getContent();
     }
 
-    public void addRecipe(User user, RecipeRequest recipeRequest) {
+    public void addRecipe(User user, RecipesRequest recipeRequest) {
         Recipe recipe = new Recipe(recipeRequest.getTitle(), recipeRequest.getDescription(), user, recipeRequest.getVege());
         saveRecipeAndItsIngredients(recipeRequest, recipe);
     }
 
     @Transactional
-    public void updateRecipe(RecipeRequest recipeRequest, Long id) {
+    public void updateRecipe(RecipesRequest recipeRequest, Long id) {
         Recipe recipe = findById(id);
         if (recipe.getId() != null) {
             recipe.setTitle(recipeRequest.getTitle());
@@ -51,7 +50,7 @@ public class RecipeService {
         }
     }
 
-    private void saveRecipeAndItsIngredients(RecipeRequest recipeRequest, Recipe recipe) {
+    private void saveRecipeAndItsIngredients(RecipesRequest recipeRequest, Recipe recipe) {
         recipeRepository.save(recipe);
         for (Ingredient ingredient : recipeRequest.getIngredients()) {
             RecipeIngredients recipeIngredients = new RecipeIngredients(recipe, ingredientService.findById(ingredient.getId()));
