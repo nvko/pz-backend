@@ -13,11 +13,11 @@ public class SearchController {
 
     @Autowired SearchService searchService;
 
-    @GetMapping("/recipes")
-    public ResponseEntity<?> findRecipesByQuery(@RequestParam(value = "query", defaultValue = "") String query,
-                                                @RequestParam(value = "page", defaultValue = "1") int page,
-                                                @RequestParam(value = "limit", defaultValue = "10") int limit) {
-        return new ResponseEntity<>(new SearchResponse<>(searchService.findAllRecipesByQuery(query, page, limit)), HttpStatus.OK);
-    }
+//    @GetMapping("/recipes")
+//    public ResponseEntity<?> findRecipesByQuery(@RequestParam(value = "query", defaultValue = "") String query,
+//                                                @RequestParam(value = "page", defaultValue = "1") int page,
+//                                                @RequestParam(value = "limit", defaultValue = "10") int limit) {
+//        return new ResponseEntity<>(new SearchResponse<>(searchService.findAllRecipesByQuery(query, page, limit)), HttpStatus.OK);
+//    }
 
 }
