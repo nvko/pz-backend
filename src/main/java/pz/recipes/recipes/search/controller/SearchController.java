@@ -13,14 +13,9 @@ public class SearchController {
 
     @Autowired SearchService searchService;
 
-//    @GetMapping("/recipes")
-//    public ResponseEntity<?> findRecipesByQuery(@RequestParam(value = "query", defaultValue = "") String query) {
-//        return new ResponseEntity<>(new SearchResponse<>(searchService.findAllByUser(query)), HttpStatus.OK);
-//    }
-
-//    @GetMapping("/ingredients")
-//    public ResponseEntity<?> findIngredientsByQuery(@RequestParam(value = "query", defaultValue = "") String query) {
-//        return new ResponseEntity<>(new SearchResponse<>(searchService.findAllIngredientsByQuery(query)), HttpStatus.OK);
-//    }
+    @GetMapping("/ingredients")
+    public ResponseEntity<?> findIngredientsByQuery(@RequestParam(value = "query", defaultValue = "") String query) {
+        return new ResponseEntity<>(new SearchResponse<>(searchService.findAllIngredientsByQuery(query)), HttpStatus.OK);
+    }
 
 }

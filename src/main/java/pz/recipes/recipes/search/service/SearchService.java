@@ -17,13 +17,14 @@ public class SearchService {
 
     @Autowired RecipesRepository recipeRepository;
     @Autowired IngredientsRepository ingredientsRepository;
+    @Autowired UsersRepository usersRepository;
 
     public List<Ingredient> findAllIngredientsByQuery(String query) {
         return ingredientsRepository.findAllByQuery(query);
     }
 
-//    public List<Recipe> findAllByUser(String username) {
-//        User user = usersRepository.findByUsername(username);
-//        return recipeRepository.findAllByUser(user);
-//    }
+    public List<Recipe> findAllByUser(String username) {
+        User user = usersRepository.findByUsername(username);
+        return recipeRepository.findAllByUser(user);
+    }
 }
