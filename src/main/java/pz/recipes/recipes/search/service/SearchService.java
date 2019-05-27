@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import pz.recipes.recipes.domain.Ingredient;
 import pz.recipes.recipes.domain.Recipe;
 import pz.recipes.recipes.domain.User;
+import pz.recipes.recipes.repository.IngredientsRepository;
 import pz.recipes.recipes.repository.RecipesRepository;
 import pz.recipes.recipes.repository.UsersRepository;
 
@@ -15,11 +16,11 @@ import java.util.List;
 public class SearchService {
 
     @Autowired RecipesRepository recipeRepository;
-    @Autowired UsersRepository usersRepository;
+    @Autowired IngredientsRepository ingredientsRepository;
 
-//    public List<Ingredient> findAllIngredientsByQuery(String query) {
-//        return recipeRepository.findAllIngredientsByQuery();
-//    }
+    public List<Ingredient> findAllIngredientsByQuery(String query) {
+        return ingredientsRepository.findAllByQuery(query);
+    }
 
 //    public List<Recipe> findAllByUser(String username) {
 //        User user = usersRepository.findByUsername(username);
