@@ -76,8 +76,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientsRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="255">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -431,12 +431,12 @@
       <workItem from="1558554019579" duration="894000" />
       <workItem from="1558561275460" duration="1835000" />
       <workItem from="1558799005982" duration="234000" />
-      <workItem from="1558973889493" duration="3214000" />
+      <workItem from="1558973889493" duration="3509000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208403000" />
+    <option name="totallyTimeSpent" value="208698000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -951,8 +951,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientsRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        <state relative-caret-position="255">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

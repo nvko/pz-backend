@@ -11,12 +11,9 @@ import java.util.List;
 @Repository
 public interface IngredientsRepository extends JpaRepository<Ingredient, Long> {
 
-//    @Query("SELECT i FROM Ingredient i WHERE name LIKE :query")
-//    List<Ingredient> findByQuery(@Param("query") String query);
-
     List<Ingredient> findByName(String name);
 
-
-    @Query("SELECT i FROM Ingredient i WHERE i.name LIKE CONCAT('%',:query,'%')")
+    // returns ingredients which name starts with query
+    @Query("SELECT i FROM Ingredient i WHERE i.name LIKE CONCAT(:query,'%')")
     List<Ingredient> findAllByQuery(@Param("query") String query);
 }
