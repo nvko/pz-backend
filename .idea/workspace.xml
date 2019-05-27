@@ -9,8 +9,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d22b26e8-ea59-4908-8854-f57918930004" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientsRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/controller/SearchController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/controller/SearchController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/service/SearchService.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,7 +31,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/controller/SearchController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -75,11 +73,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientsRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -224,9 +222,9 @@
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/service/UsersService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/controller/UsersController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/service/SearchService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/controller/SearchController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientsRepository.java" />
       </list>
     </option>
   </component>
@@ -433,12 +431,12 @@
       <workItem from="1558554019579" duration="894000" />
       <workItem from="1558561275460" duration="1835000" />
       <workItem from="1558799005982" duration="234000" />
-      <workItem from="1558973889493" duration="3011000" />
+      <workItem from="1558973889493" duration="3214000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="208200000" />
+    <option name="totallyTimeSpent" value="208403000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -892,18 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/controller/UsersController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1092#1093#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/service/UsersService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -941,20 +927,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientsRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/controller/SearchController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="42" selection-start-line="20" selection-start-column="42" selection-end-line="20" selection-end-column="42" />
+        <state relative-caret-position="255">
+          <caret line="15" selection-start-line="15" selection-end-line="15" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/controller/SearchController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/controller/UsersController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
+        <state relative-caret-position="612">
+          <caret line="36" column="37" selection-start-line="36" selection-start-column="37" selection-end-line="36" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1041#1042#0" expanded="true" />
+            <element signature="e#1092#1093#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/IngredientsRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

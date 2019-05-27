@@ -17,6 +17,6 @@ public interface IngredientsRepository extends JpaRepository<Ingredient, Long> {
     List<Ingredient> findByName(String name);
 
 
-    @Query("SELECT i FROM ingredient i WHERE i.name LIKE CONCAT('%',:query,'%')")
+    @Query("SELECT i FROM Ingredient i WHERE i.name LIKE CONCAT('%',:query,'%')")
     List<Ingredient> findAllByQuery(@Param("query") String query);
 }
