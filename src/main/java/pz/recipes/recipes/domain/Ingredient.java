@@ -32,7 +32,7 @@ public class Ingredient implements Serializable {
         this.vege = vege;
     }
 
-    @OneToMany(mappedBy = "ingredient", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, orphanRemoval = true)
+    @OneToMany(mappedBy = "", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, orphanRemoval = true)
     @JsonIgnore
     private Set<Fridge> fridge;
 
