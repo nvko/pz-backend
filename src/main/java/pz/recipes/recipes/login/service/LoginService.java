@@ -8,8 +8,10 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
+import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.login.dto.LoginRequest;
 import pz.recipes.recipes.login.dto.LoginResponse;
+import pz.recipes.recipes.repository.UsersRepository;
 import pz.recipes.recipes.security.jwt.JwtTokenProvider;
 
 @Service
@@ -19,12 +21,15 @@ public class LoginService {
     private AuthenticationManager authenticationManager;
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
+    @Autowired
+    private UsersRepository usersRepository;
 
     public ResponseEntity<?> login(LoginRequest loginRequest) {
         Authentication authentication = getAuthentication(loginRequest);
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtTokenProvider.generateToken(authentication);
-        return new ResponseEntity<>(new LoginResponse(jwt), HttpStatus.OK);
+        User user = usersRepository.findByUsername(loginRequest.getUsername());
+        return new ResponseEntity<>(new LoginResponse(user.getId(), jwt), HttpStatus.OK);
     }
 
     private Authentication getAuthentication(LoginRequest loginRequest) {
