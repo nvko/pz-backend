@@ -1,5 +1,8 @@
 package pz.recipes.recipes.account.dto;
 
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
 public class AccountRequest {
 
     private String email;

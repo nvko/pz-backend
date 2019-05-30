@@ -9,11 +9,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d22b26e8-ea59-4908-8854-f57918930004" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/dto/LoginResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/dto/LoginResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/service/LoginService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Ingredient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Ingredient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/login/dto/LoginResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/login/dto/LoginResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/login/service/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/login/service/LoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/dto/AccountRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/dto/AccountRequest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,7 +47,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Ingredient.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="316">
+            <state relative-caret-position="238">
               <caret line="22" selection-start-line="22" selection-end-line="22" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -60,14 +56,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/dto/LoginResponse.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+            <state relative-caret-position="204">
+              <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
               <folding>
-                <element signature="e#201#202#0" expanded="true" />
-                <element signature="e#229#230#0" expanded="true" />
                 <element signature="e#339#340#0" expanded="true" />
                 <element signature="e#373#374#0" expanded="true" />
                 <element signature="e#404#405#0" expanded="true" />
@@ -75,6 +69,24 @@
                 <element signature="e#475#476#0" expanded="true" />
                 <element signature="e#511#512#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/dto/AccountRequest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/controller/AccountController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -91,7 +103,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/service/LoginService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
+            <state relative-caret-position="323">
               <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -175,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/security/jwt/JwtTokenProvider.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/users/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/RecipeIngredientsRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/OneObjectResponse.java" />
@@ -226,6 +237,7 @@
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/me/controller/dto/MeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/service/LoginService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/dto/LoginResponse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/dto/AccountRequest.java" />
       </list>
     </option>
   </component>
@@ -236,7 +248,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1040" />
@@ -251,7 +263,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -292,7 +303,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pz-backend" type="b2602c69:ProjectViewProjectNode" />
@@ -301,7 +312,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
               <item name="controller" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -311,18 +322,8 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
+              <item name="account" type="462c0819:PsiDirectoryNode" />
               <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pz-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pz-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pz-backend" type="b2602c69:ProjectViewProjectNode" />
@@ -335,6 +336,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -344,7 +346,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559183967979" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559229820749" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/me/controller" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -453,12 +455,13 @@
       <workItem from="1558973889493" duration="5354000" />
       <workItem from="1558995388537" duration="3046000" />
       <workItem from="1559066462790" duration="2468000" />
-      <workItem from="1559160200302" duration="2452000" />
+      <workItem from="1559160200302" duration="3547000" />
+      <workItem from="1559234199281" duration="610000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218509000" />
+    <option name="totallyTimeSpent" value="220214000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -473,7 +476,7 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.25266525" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.2553305" />
       <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.24466951" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -553,20 +556,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jrt://C:/Program Files/Java/jdk-10.0.1!/jdk.jfr/jdk/jfr/Enabled.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="5" column="16" lean-forward="true" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2.jar!/javax/persistence/OneToMany.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/dto/IngredientsRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -930,6 +919,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/me/controller/MeController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/me/service/MeService.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/me/dto/MeResponse.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/RecipeIngredients.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -950,17 +942,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/me/controller/MeController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Ingredient.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="40" selection-start-column="40" selection-end-column="40" />
+        <state relative-caret-position="238">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/me/service/MeService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/controller/LoginController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="102">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/service/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -984,47 +989,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/me/dto/MeResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/controller/LoginController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Ingredient.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="316">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/service/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="67" selection-start-line="31" selection-start-column="67" selection-end-line="31" selection-end-column="67" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/login/dto/LoginResponse.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="204">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
-            <element signature="e#201#202#0" expanded="true" />
-            <element signature="e#229#230#0" expanded="true" />
             <element signature="e#339#340#0" expanded="true" />
             <element signature="e#373#374#0" expanded="true" />
             <element signature="e#404#405#0" expanded="true" />
@@ -1032,6 +1001,20 @@
             <element signature="e#475#476#0" expanded="true" />
             <element signature="e#511#512#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/controller/AccountController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/account/dto/AccountRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>
