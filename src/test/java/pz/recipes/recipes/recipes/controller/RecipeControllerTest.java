@@ -14,10 +14,10 @@ import pz.recipes.recipes.MessageResponse;
 import pz.recipes.recipes.domain.Recipe;
 import pz.recipes.recipes.domain.Role;
 import pz.recipes.recipes.domain.User;
-import pz.recipes.recipes.recipes.dto.RecipeRequest;
-import pz.recipes.recipes.recipes.dto.RecipeResponse;
-import pz.recipes.recipes.recipes.service.RecipeService;
-import pz.recipes.recipes.users.service.UserService;
+import pz.recipes.recipes.recipes.dto.RecipesRequest;
+import pz.recipes.recipes.recipes.dto.RecipesResponse;
+import pz.recipes.recipes.recipes.service.RecipesService;
+import pz.recipes.recipes.users.service.UsersService;
 
 import java.util.Collections;
 
@@ -29,17 +29,17 @@ import static org.mockito.Mockito.*;
 public class RecipeControllerTest {
 
     @InjectMocks
-    RecipeController recipeController = new RecipeController();
+    RecipesController recipeController = new RecipesController();
     @Mock
-    RecipeService recipeService;
+    RecipesService recipeService;
     @Mock
-    UserService userService;
+    UsersService userService;
     @Mock
     Authentication authentication;
 
     @Test
     public void getRecipes() {
-        ResponseEntity<?> expectedResponse = new ResponseEntity<>(new RecipeResponse(Lists.emptyList()), HttpStatus.OK);
+        ResponseEntity<?> expectedResponse = new ResponseEntity<>(new RecipesResponse(Lists.emptyList()), HttpStatus.OK);
         ResponseEntity<?> responseEntity = recipeController.getRecipes(10, 10, "id");
         verify(recipeService, times(1)).getRecipes(10, 10, "id");
         assertEquals(expectedResponse, responseEntity);
@@ -58,7 +58,7 @@ public class RecipeControllerTest {
 
     @Test
     public void addRecipeHasSomethingNull() {
-        RecipeRequest recipeRequest = mock(RecipeRequest.class);
+        RecipesRequest recipeRequest = mock(RecipesRequest.class);
         when(recipeRequest.hasSomethingNull()).thenReturn(true);
         ResponseEntity<?> expectedResponse = new ResponseEntity<>(new MessageResponse("Request is invalid"), HttpStatus.CONFLICT);
         ResponseEntity responseEntity = recipeController.addRecipe(authentication, recipeRequest);
@@ -68,7 +68,7 @@ public class RecipeControllerTest {
     @Test
     public void addRecipeUserExist() {
         User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true);
-        RecipeRequest recipeRequest = mock(RecipeRequest.class);
+        RecipesRequest recipeRequest = mock(RecipesRequest.class);
         when(recipeRequest.hasSomethingNull()).thenReturn(false);
         when(userService.findByUsername(authentication.getName())).thenReturn(user);
         ResponseEntity responseEntity = recipeController.addRecipe(authentication, recipeRequest);
@@ -77,7 +77,7 @@ public class RecipeControllerTest {
     }
     @Test
     public void addRecipeUserDoNotExist() {
-        RecipeRequest recipeRequest = mock(RecipeRequest.class);
+        RecipesRequest recipeRequest = mock(RecipesRequest.class);
         when(recipeRequest.hasSomethingNull()).thenReturn(false);
         when(userService.findByUsername(authentication.getName())).thenReturn(null);
         ResponseEntity responseEntity = recipeController.addRecipe(authentication, recipeRequest);
@@ -86,7 +86,7 @@ public class RecipeControllerTest {
 
     @Test
     public void updateRecipeHasSomethingNull() {
-        RecipeRequest recipeRequest = mock(RecipeRequest.class);
+        RecipesRequest recipeRequest = mock(RecipesRequest.class);
         when(recipeRequest.hasSomethingNull()).thenReturn(true);
         ResponseEntity<?> expectedResponse = new ResponseEntity<>(new MessageResponse("Request is invalid"), HttpStatus.CONFLICT);
         ResponseEntity responseEntity = recipeController.updateRecipe(authentication,12L, recipeRequest);
@@ -95,14 +95,14 @@ public class RecipeControllerTest {
 
     @Test
     public void updateRecipeUserExist() {
-        RecipeRequest recipeRequest = mock(RecipeRequest.class);
+        RecipesRequest recipeRequest = mock(RecipesRequest.class);
         configStubs(13, 13,recipeRequest);
         ResponseEntity<?> responseEntity = recipeController.updateRecipe(authentication, 13L, recipeRequest);
         assertEquals(HttpStatus.OK,responseEntity.getStatusCode());
     }
     @Test
     public void updateRecipeUserDoNotExist() {
-        RecipeRequest recipeRequest = mock(RecipeRequest.class);
+        RecipesRequest recipeRequest = mock(RecipesRequest.class);
         configStubs(12, 16,recipeRequest);
         ResponseEntity<?> responseEntity = recipeController.updateRecipe(authentication, 12L, recipeRequest);
         assertEquals(HttpStatus.UNAUTHORIZED,responseEntity.getStatusCode());
@@ -111,7 +111,7 @@ public class RecipeControllerTest {
 
     @Test
     public void correctDeleteRecipe() {
-        RecipeRequest recipeRequest = mock(RecipeRequest.class);
+        RecipesRequest recipeRequest = mock(RecipesRequest.class);
         configStubs(12L,12L,recipeRequest);
         ResponseEntity<?> responseEntity = recipeController.deleteRecipe(authentication, 12L);
         assertEquals(HttpStatus.OK,responseEntity.getStatusCode());
@@ -120,13 +120,13 @@ public class RecipeControllerTest {
 
     @Test
     public void incorrectDeleteRecipe() {
-        RecipeRequest recipeRequest = mock(RecipeRequest.class);
+        RecipesRequest recipeRequest = mock(RecipesRequest.class);
         configStubs(12L,13L,recipeRequest);
         ResponseEntity<?> responseEntity = recipeController.deleteRecipe(authentication, 12L);
         assertEquals(HttpStatus.UNAUTHORIZED,responseEntity.getStatusCode());
     }
 
-    public void configStubs(long idFirstUser,long idSecondUser,RecipeRequest recipeRequest) {
+    public void configStubs(long idFirstUser,long idSecondUser,RecipesRequest recipeRequest) {
         User user = spy(new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true));
         User anotherUser = spy(new User("User2", "email2@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true));
         Recipe recipe = spy(new Recipe("recipeTitle", "recipeDescription", user, true));

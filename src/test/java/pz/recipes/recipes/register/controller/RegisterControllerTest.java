@@ -10,7 +10,7 @@ import org.springframework.http.ResponseEntity;
 import pz.recipes.recipes.MessageResponse;
 import pz.recipes.recipes.register.dto.RegisterRequest;
 import pz.recipes.recipes.register.service.RegisterService;
-import pz.recipes.recipes.users.service.UserService;
+import pz.recipes.recipes.users.service.UsersService;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
@@ -24,7 +24,7 @@ public class RegisterControllerTest {
     @Mock
     RegisterService registerService;
     @Mock
-    UserService userService;
+    UsersService userService;
 
     @Test
     public void registerGetUsername() {

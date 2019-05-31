@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import pz.recipes.recipes.domain.Recipe;
 import pz.recipes.recipes.domain.Role;
 import pz.recipes.recipes.domain.User;
-import pz.recipes.recipes.repository.RecipeRepository;
+import pz.recipes.recipes.repository.RecipesRepository;
 
 import java.util.Collections;
 
@@ -22,9 +22,9 @@ import static org.mockito.Mockito.*;
 public class RecipeServiceTest {
 
     @InjectMocks
-    RecipeService recipeService = new RecipeService();
+    RecipesService recipeService = new RecipesService();
     @Mock
-    RecipeRepository recipeRepository;
+    RecipesRepository recipeRepository;
 
 
     User user;

@@ -12,7 +12,7 @@ import org.springframework.security.core.Authentication;
 import pz.recipes.recipes.MessageResponse;
 import pz.recipes.recipes.account.dto.AccountRequest;
 import pz.recipes.recipes.account.service.AccountService;
-import pz.recipes.recipes.users.service.UserService;
+import pz.recipes.recipes.users.service.UsersService;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
@@ -27,7 +27,7 @@ public class AccountControllerTest {
     @Mock
     AccountService accountService;
     @Mock
-    UserService userService;
+    UsersService userService;
 
     @Test
     public void updateDiet() {

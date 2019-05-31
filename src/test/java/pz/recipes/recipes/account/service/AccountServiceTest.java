@@ -10,7 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import pz.recipes.recipes.domain.Role;
 import pz.recipes.recipes.domain.User;
-import pz.recipes.recipes.repository.UserRepository;
+import pz.recipes.recipes.repository.UsersRepository;
 
 import java.util.Collections;
 
@@ -25,7 +25,7 @@ public class AccountServiceTest {
     @InjectMocks
     AccountService accountService = new AccountService();
     @Mock
-    UserRepository userRepository;
+    UsersRepository userRepository;
     @Mock
     PasswordEncoder passwordEncoder;
 

@@ -14,7 +14,7 @@ import pz.recipes.recipes.domain.Ingredient;
 import pz.recipes.recipes.domain.Role;
 import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.repository.FridgeRepository;
-import pz.recipes.recipes.repository.IngredientRepository;
+import pz.recipes.recipes.repository.IngredientsRepository;
 
 import java.util.Collections;
 import java.util.List;
@@ -32,7 +32,7 @@ public class FridgeServiceTest {
     @Mock
     FridgeRepository fridgeRepository;
     @Mock
-    IngredientRepository ingredientRepository;
+    IngredientsRepository ingredientRepository;
 
     User user;
 

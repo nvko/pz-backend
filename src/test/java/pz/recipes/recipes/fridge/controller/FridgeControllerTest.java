@@ -16,8 +16,8 @@ import pz.recipes.recipes.domain.Role;
 import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.fridge.dto.FridgeResponse;
 import pz.recipes.recipes.fridge.service.FridgeService;
-import pz.recipes.recipes.ingredients.service.IngredientService;
-import pz.recipes.recipes.users.service.UserService;
+import pz.recipes.recipes.ingredients.service.IngredientsService;
+import pz.recipes.recipes.users.service.UsersService;
 
 import java.util.Collections;
 
@@ -31,9 +31,9 @@ public class FridgeControllerTest {
     @InjectMocks
     FridgeController fridgeController = new FridgeController();
     @Mock
-    UserService userService;
+    UsersService userService;
     @Mock
-    IngredientService ingredientService;
+    IngredientsService ingredientService;
     @Mock
     FridgeService fridgeService;
     @Mock

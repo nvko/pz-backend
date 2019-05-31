@@ -7,8 +7,8 @@ import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
 import org.springframework.boot.test.context.SpringBootTest;
 import pz.recipes.recipes.domain.Ingredient;
-import pz.recipes.recipes.ingredients.dto.IngredientRequest;
-import pz.recipes.recipes.repository.IngredientRepository;
+import pz.recipes.recipes.ingredients.dto.IngredientsRequest;
+import pz.recipes.recipes.repository.IngredientsRepository;
 
 import java.util.Collections;
 import java.util.Optional;
@@ -21,9 +21,9 @@ import static org.mockito.Mockito.*;
 public class IngredientServiceTest {
 
     @InjectMocks
-    IngredientService ingredientService = new IngredientService();
+    IngredientsService ingredientService = new IngredientsService();
     @Mock
-    IngredientRepository ingredientRepository;
+    IngredientsRepository ingredientRepository;
 
     @Test
     public void addIngredient() {
@@ -70,7 +70,7 @@ public class IngredientServiceTest {
 
     @Test
     public void updateIngredient() {
-        IngredientRequest ingredientRequest = spy(new IngredientRequest());
+        IngredientsRequest ingredientRequest = spy(new IngredientsRequest());
         Ingredient ingredient = spy(new Ingredient("ingredient", true));
         Long id = 12L;
         when(ingredientRepository.findById(id)).thenReturn(Optional.ofNullable(ingredient));

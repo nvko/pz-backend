@@ -12,8 +12,8 @@ import org.springframework.security.core.Authentication;
 import pz.recipes.recipes.MessageResponse;
 import pz.recipes.recipes.domain.Ingredient;
 import pz.recipes.recipes.domain.Role;
-import pz.recipes.recipes.ingredients.dto.IngredientRequest;
-import pz.recipes.recipes.ingredients.service.IngredientService;
+import pz.recipes.recipes.ingredients.dto.IngredientsRequest;
+import pz.recipes.recipes.ingredients.service.IngredientsService;
 
 import java.util.Collections;
 import java.util.List;
@@ -28,14 +28,14 @@ public class IngredientsControllerTest {
     @InjectMocks
     IngredientsController ingredientsController = new IngredientsController();
     @Mock
-    IngredientService ingredientService;
+    IngredientsService ingredientService;
     @Mock
     Authentication authentication;
 
     @Test
     public void addIngredientAdminIngredientExist() {
         ResponseEntity<?> expectedResponse = new ResponseEntity<>(new MessageResponse("This ingredient already exists"), HttpStatus.CONFLICT);
-        IngredientRequest ingredientRequest = new IngredientRequest();
+        IngredientsRequest ingredientRequest = new IngredientsRequest();
         ingredientRequest.setName("ingredient");
         ingredientRequest.setVege(true);
         when((List<Role>) authentication.getAuthorities()).thenReturn(Collections.singletonList(Role.ROLE_ADMIN));
@@ -46,7 +46,7 @@ public class IngredientsControllerTest {
 
     @Test
     public void addIngredientAdminIngredientDoesNotExist() {
-        IngredientRequest ingredientRequest = new IngredientRequest();
+        IngredientsRequest ingredientRequest = new IngredientsRequest();
         ingredientRequest.setName("ingredient");
         ingredientRequest.setVege(true);
         when((List<Role>) authentication.getAuthorities()).thenReturn(Collections.singletonList(Role.ROLE_ADMIN));
@@ -59,7 +59,7 @@ public class IngredientsControllerTest {
     @Test
     public void addIngredientUser() {
         ResponseEntity<?> expectedResponse = new ResponseEntity<>(new MessageResponse("You are not authorized to add new ingredients."), HttpStatus.UNAUTHORIZED);
-        IngredientRequest ingredientRequest = new IngredientRequest();
+        IngredientsRequest ingredientRequest = new IngredientsRequest();
         ingredientRequest.setName("ingredient");
         ingredientRequest.setVege(true);
         when((List<Role>) authentication.getAuthorities()).thenReturn(Collections.singletonList(Role.ROLE_USER));
@@ -113,7 +113,7 @@ public class IngredientsControllerTest {
     @Test
     public void updateIngredientAdminIngredientExist() {
         Ingredient ingredient = mock(Ingredient.class);
-        IngredientRequest ingredientRequest = new IngredientRequest();
+        IngredientsRequest ingredientRequest = new IngredientsRequest();
         ingredientRequest.setName("ingredient");
         ingredientRequest.setVege(true);
         when((List<Role>) authentication.getAuthorities()).thenReturn(Collections.singletonList(Role.ROLE_ADMIN));
@@ -127,7 +127,7 @@ public class IngredientsControllerTest {
     @Test
     public void updateIngredientAdminIngredientDoesNotExist() {
         Ingredient ingredient = mock(Ingredient.class);
-        IngredientRequest ingredientRequest = new IngredientRequest();
+        IngredientsRequest ingredientRequest = new IngredientsRequest();
         ingredientRequest.setName("ingredient");
         ingredientRequest.setVege(true);
         ResponseEntity<?> expectedResponse = new ResponseEntity<>(new MessageResponse("This ingredient doesn't exist"), HttpStatus.CONFLICT);
@@ -140,7 +140,7 @@ public class IngredientsControllerTest {
 
     @Test
     public void updateIngredientUser() {
-        IngredientRequest ingredientRequest = new IngredientRequest();
+        IngredientsRequest ingredientRequest = new IngredientsRequest();
         ingredientRequest.setName("ingredient");
         ingredientRequest.setVege(true);
         ResponseEntity<?> expectedResponse = new ResponseEntity<>(new MessageResponse("You are not authorized to update ingredients."), HttpStatus.UNAUTHORIZED);

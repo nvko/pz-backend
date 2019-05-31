@@ -11,7 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import pz.recipes.recipes.domain.Role;
 import pz.recipes.recipes.domain.User;
-import pz.recipes.recipes.users.service.UserService;
+import pz.recipes.recipes.users.service.UsersService;
 
 import java.util.Collections;
 
@@ -24,9 +24,9 @@ import static org.springframework.http.ResponseEntity.ok;
 public class UserControllerTest {
 
     @InjectMocks
-    UserController userController;
+    UsersController userController;
     @Mock
-    UserService userService;
+    UsersService userService;
 
     @Test
     public void getUsers() {

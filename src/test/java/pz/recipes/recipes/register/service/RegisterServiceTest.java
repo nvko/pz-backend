@@ -10,7 +10,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import pz.recipes.recipes.domain.Role;
 import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.register.dto.RegisterRequest;
-import pz.recipes.recipes.repository.UserRepository;
+import pz.recipes.recipes.repository.UsersRepository;
 
 import java.util.Collections;
 
@@ -23,7 +23,7 @@ public class RegisterServiceTest {
     @InjectMocks
     RegisterService registerService = new RegisterService();
     @Mock
-    UserRepository userRepository;
+    UsersRepository userRepository;
     @Mock
     PasswordEncoder passwordEncoder;
 
