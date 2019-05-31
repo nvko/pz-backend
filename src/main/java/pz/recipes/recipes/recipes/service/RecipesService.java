@@ -2,6 +2,7 @@ package pz.recipes.recipes.recipes.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import pz.recipes.recipes.domain.Ingredient;
@@ -15,7 +16,7 @@ import pz.recipes.recipes.repository.RecipesRepository;
 import pz.recipes.recipes.repository.UsersRepository;
 
 import javax.transaction.Transactional;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class RecipesService {
@@ -31,6 +32,31 @@ public class RecipesService {
 
     public List<Recipe> getRecipes(int page, int limit, String sort) {
         return recipeRepository.findAll(PageRequest.of(page, limit, Sort.by(sort))).getContent();
+    }
+
+    public List<Recipe> findByIngredients(int page, int limit, String sort, Set<Ingredient> ingredients) {
+        List<RecipeIngredients> recipeIngredients = new ArrayList<>();
+        List<Recipe> finalRecipes = new ArrayList<>();
+        Set<Recipe> recipeIngredientsFiltered = new HashSet<>();
+        List<Recipe> recipes = new ArrayList<>();
+
+        // przejdź po składnikach requestu i wybierz wszystkie przepisy, które zawierają chociaż jeden składnik
+        for(Ingredient ingredient: ingredients) {
+            recipeIngredients.addAll(recipeIngredientsRepository.findAllByIngredient(ingredient));
+        }
+        // wrzuć przepisy do osobnej listy i do setu
+        for(RecipeIngredients r: recipeIngredients) {
+            recipes.add(r.recipe);
+            recipeIngredientsFiltered.add(r.recipe);
+        }
+        // przeiteruj po secie (żeby się nie powtarzać) i sprawdź, które z przepisów mają tylko pożądane składniki
+        for(Recipe r: recipeIngredientsFiltered) {
+            int occurencies = Collections.frequency(recipes, r);
+            if(occurencies == ingredients.size() && r.getIngredients().size() == ingredients.size()) {
+                finalRecipes.add(r);
+            }
+        }
+        return finalRecipes;
     }
 
     public void addRecipe(User user, RecipesRequest recipeRequest) {

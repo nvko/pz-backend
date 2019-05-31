@@ -22,10 +22,10 @@ public class RecipeIngredients implements Serializable {
 
     @ManyToOne()
     @JsonIgnore
-    private Recipe recipe;
+    public Recipe recipe;
 
     @ManyToOne()
-    private Ingredient ingredient;
+    public Ingredient ingredient;
 
     public RecipeIngredients(Recipe recipe, Ingredient ingredient) {
         this.recipe = recipe;

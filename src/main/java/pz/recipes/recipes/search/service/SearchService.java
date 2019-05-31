@@ -15,7 +15,7 @@ import java.util.List;
 @Service
 public class SearchService {
 
-    @Autowired RecipesRepository recipeRepository;
+    @Autowired RecipesRepository recipesRepository;
     @Autowired IngredientsRepository ingredientsRepository;
     @Autowired UsersRepository usersRepository;
 
@@ -25,6 +25,10 @@ public class SearchService {
 
     public List<Recipe> findAllByUser(String username) {
         User user = usersRepository.findByUsername(username);
-        return recipeRepository.findAllByUser(user);
+        return recipesRepository.findAllByUser(user);
+    }
+
+    public List<Recipe> findByQuery(int page, int limit, String sort, String query) {
+        return recipesRepository.findAllByQuery(query);
     }
 }
