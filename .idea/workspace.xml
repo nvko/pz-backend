@@ -8,12 +8,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d22b26e8-ea59-4908-8854-f57918930004" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/account/controller/AccountControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/account/service/AccountServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/fridge/controller/FridgeControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/fridge/service/FridgeServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/ingredients/controller/IngredientsControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/ingredients/service/IngredientServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/recipes/controller/RecipeControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/recipes/service/RecipeServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/register/controller/RegisterControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/register/service/RegisterServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/users/controller/UserControllerTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/users/service/UserServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/controller/FridgeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/controller/FridgeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/service/FridgeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/service/FridgeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/RecipesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/RecipesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/service/SearchService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/search/service/SearchService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/recipes.iml" beforeDir="false" afterPath="$PROJECT_DIR$/recipes.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/MessageResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Fridge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Fridge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/dto/FridgeResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/dto/FridgeResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/dto/RecipesResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/dto/RecipesResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/RecipesApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/MessageResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/MessageResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/account/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/account/service/AccountService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Fridge$FridgeBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Fridge$FridgeBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Fridge.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Fridge.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Ingredient$IngredientBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Ingredient$IngredientBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Ingredient.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/Ingredient.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/fridge/dto/FridgeResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/fridge/dto/FridgeResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/fridge/service/FridgeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/fridge/service/FridgeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/security/UserDetailService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/security/UserDetailService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/security/jwt/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/security/jwt/JwtAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/security/jwt/JwtTokenProvider.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pz/recipes/recipes/security/jwt/JwtTokenProvider.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/pz/recipes/recipes/RecipesApplicationTests.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,37 +56,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/controller/FridgeController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="391">
+              <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
               <folding>
-                <marker date="1559331220400" expanded="true" signature="48:319" ph="..." />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/service/FridgeService.java">
+        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="39" column="65" selection-start-line="39" selection-start-column="65" selection-end-line="39" selection-end-column="65" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state>
+              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pz/recipes/recipes/fridge/controller/FridgeControllerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="333">
+              <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/controller/FridgeController.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/pz/recipes/recipes/fridge/service/FridgeServiceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
-              <caret line="46" column="88" lean-forward="true" selection-start-line="46" selection-start-column="88" selection-end-line="46" selection-end-column="88" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="162">
+              <caret line="74" selection-start-line="74" selection-end-line="74" />
             </state>
           </provider>
         </entry>
@@ -64,25 +98,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/service/IngredientsService.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="272">
-              <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+              <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#616#617#0" expanded="true" />
                 <element signature="e#678#679#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/dto/RecipesResponse.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#223#224#0" expanded="true" />
-                <element signature="e#261#262#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -162,6 +182,7 @@
       <find>of</find>
       <find>Sy</find>
       <find>repositories</find>
+      <find>hasIngredient</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -196,8 +217,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/User.java" />
-        <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/dto/RecipeRequest.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/recipes/service/RecipeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/FridgeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/FridgeResponse.java" />
@@ -247,6 +266,8 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/service/FridgeService.java" />
         <option value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/controller/FridgeController.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/fridge/service/FridgeServiceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/pz/recipes/recipes/fridge/controller/FridgeControllerTest.java" />
       </list>
     </option>
   </component>
@@ -257,7 +278,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1040" />
@@ -271,7 +292,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,51 +322,28 @@
               <item name="pz-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="pz-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="recipes" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pz-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="pz-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="fridge" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pz-backend" type="b2602c69:ProjectViewProjectNode" />
               <item name="pz-backend" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="fridge" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pz-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pz-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="recipes" type="462c0819:PsiDirectoryNode" />
-              <item name="fridge" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pz-backend" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pz-backend" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -355,16 +353,16 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559335543505" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559427341732" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/pz/recipes/recipes/me/controller" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
@@ -394,7 +392,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in recipes">
+    <configuration name="All in recipes" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="recipes" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="10" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="PARAMETERS" value="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="RecipesApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="recipes" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="pz.recipes.recipes.RecipesApplication" />
@@ -404,6 +415,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.All in recipes" />
+      <item itemvalue="Spring Boot.RecipesApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in recipes" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -471,8 +491,25 @@
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_recipes - 2019.06.02 at 00h 01m 11s.xml">
+      <configuration name="All in recipes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_recipes - 2019.06.02 at 00h 01m 24s.xml">
+      <configuration name="All in recipes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_recipes - 2019.06.02 at 00h 01m 35s.xml">
+      <configuration name="All in recipes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_recipes - 2019.06.02 at 00h 01m 41s.xml">
+      <configuration name="All in recipes" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_recipes - 2019.06.02 at 00h 12m 49s.xml">
+      <configuration name="All in recipes" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="246003000" />
+    <option name="totallyTimeSpent" value="247781000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -484,10 +521,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.26066098" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49919224" visible="true" weight="0.26332623" />
       <window_info id="Structure" order="1" sideWeight="0.50080776" side_tool="true" weight="0.24466951" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -497,16 +533,16 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.81396586" weight="0.38786566" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.81289977" visible="true" weight="0.38786566" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.18603411" side_tool="true" weight="0.34019503" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.18710022" side_tool="true" visible="true" weight="0.38786566" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
-      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49946696" weight="0.32936078" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.72601277" weight="0.32936078" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
       <window_info anchor="bottom" id="Version Control" order="14" weight="0.32936078" />
@@ -567,33 +603,6 @@
     </option>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/MessageResponse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="32" selection-start-line="10" selection-start-column="32" selection-end-line="10" selection-end-column="32" />
-          <folding>
-            <element signature="e#235#236#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/security/jwt/JwtTokenProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="12" column="122" selection-start-line="12" selection-start-column="122" selection-end-line="12" selection-end-column="122" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/domain/Role.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/OneObjectResponse.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/dto/FridgeResponse.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -697,13 +706,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -895,8 +897,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/repository/FridgeRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        <state relative-caret-position="153">
+          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -992,18 +994,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/service/IngredientsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="38" lean-forward="true" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#678#679#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/service/FridgeService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="629">
@@ -1014,13 +1004,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/target/classes/pz/recipes/recipes/fridge/service/FridgeService.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#1788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/ingredients/service/IngredientsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#678#679#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/pz/recipes/recipes/fridge/controller/FridgeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="46" column="88" lean-forward="true" selection-start-line="46" selection-start-column="88" selection-end-line="46" selection-end-column="88" />
+        <state relative-caret-position="391">
+          <caret line="23" column="71" selection-start-line="23" selection-start-column="71" selection-end-line="23" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pz/recipes/recipes/fridge/controller/FridgeControllerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="120" lean-forward="true" selection-start-line="120" selection-end-line="120" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/pz/recipes/recipes/fridge/service/FridgeServiceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="74" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
@@ -1064,7 +1096,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>10</last-edited>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

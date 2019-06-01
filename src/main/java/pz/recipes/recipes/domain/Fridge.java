@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.Objects;
 
 @Entity
 @Builder
@@ -49,5 +50,21 @@ public class Fridge implements Serializable {
 
     public void setIngredient(Ingredient ingredient) {
         this.ingredient = ingredient;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Fridge fridge = (Fridge) o;
+        return Objects.equals(id, fridge.id) &&
+                Objects.equals(user, fridge.user) &&
+                Objects.equals(ingredient, fridge.ingredient);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, user, ingredient);
     }
 }
