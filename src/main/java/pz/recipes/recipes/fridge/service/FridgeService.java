@@ -7,6 +7,7 @@ import pz.recipes.recipes.domain.Ingredient;
 import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.repository.FridgeRepository;
 import pz.recipes.recipes.repository.IngredientsRepository;
+import pz.recipes.recipes.repository.UsersRepository;
 
 import javax.transaction.Transactional;
 import java.util.List;
@@ -16,6 +17,7 @@ public class FridgeService {
 
     @Autowired FridgeRepository fridgeRepository;
     @Autowired IngredientsRepository ingredientRepository;
+    @Autowired UsersRepository usersRepository;
 
     public List<Fridge> findByUser(User user) {
         return fridgeRepository.findAllByUser(user);
@@ -35,8 +37,8 @@ public class FridgeService {
         }
     }
 
-    public boolean hasIngredient(Ingredient ingredient) {
-        return fridgeRepository.findByIngredient(ingredient) != null;
+    public boolean hasIngredient(Ingredient ingredient, User user) {
+        return fridgeRepository.findByUserAndIngredient(user, ingredient) != null;
     }
 
     @Transactional

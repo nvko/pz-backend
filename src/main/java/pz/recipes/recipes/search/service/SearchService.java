@@ -2,6 +2,7 @@ package pz.recipes.recipes.search.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import pz.recipes.recipes.domain.Ingredient;
 import pz.recipes.recipes.domain.Recipe;
@@ -29,6 +30,6 @@ public class SearchService {
     }
 
     public List<Recipe> findByQuery(int page, int limit, String sort, String query) {
-        return recipesRepository.findAllByQuery(query);
+        return recipesRepository.findAllByQuery(PageRequest.of(page, limit), query);
     }
 }

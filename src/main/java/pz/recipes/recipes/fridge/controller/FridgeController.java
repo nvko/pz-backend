@@ -29,7 +29,7 @@ public class FridgeController {
     @PostMapping("/add/{id}")
     public ResponseEntity<?> addIngredient(Authentication authentication, @PathVariable(name = "id") Long ingredientId) {
         User user = userService.findByUsername(authentication.getName());
-        if (fridgeService.hasIngredient(ingredientService.findById(ingredientId))) {
+        if (fridgeService.hasIngredient(ingredientService.findById(ingredientId), user)) {
             return new ResponseEntity<>(new MessageResponse("This ingredient is already in your fridge"), HttpStatus.BAD_REQUEST);
         } else {
             fridgeService.addIngredient(ingredientService.findById(ingredientId), user);
@@ -40,7 +40,7 @@ public class FridgeController {
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> removeIngredient(Authentication authentication, @PathVariable(name = "id") Long ingredientId) {
         User user = userService.findByUsername(authentication.getName());
-        if (!fridgeService.hasIngredient(ingredientService.findById(ingredientId))) {
+        if (!fridgeService.hasIngredient(ingredientService.findById(ingredientId), user)) {
             return new ResponseEntity<>(new MessageResponse("Ingredient doesn't exist in fridge"), HttpStatus.BAD_REQUEST);
         } else {
             fridgeService.deleteIngredient(ingredientService.findById(ingredientId), user);
