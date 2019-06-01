@@ -38,7 +38,7 @@ public class FridgeServiceTest {
 
     @Before
     public void setUp() {
-        user = new User("User","email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true);
+        user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true);
     }
 
     @Test
@@ -53,7 +53,7 @@ public class FridgeServiceTest {
         Fridge fridge = new Fridge(user, ingredient);
         when(ingredient.getId()).thenReturn(12L);
         when(ingredientRepository.findById(ingredient.getId())).thenReturn(Optional.of(ingredient));
-        fridgeService.addIngredient(ingredient,user);
+        fridgeService.addIngredient(ingredient, user);
         Mockito.verify(fridgeRepository, times(1)).save(fridge);
     }
 
@@ -61,31 +61,31 @@ public class FridgeServiceTest {
     public void deleteIngredient() {
         Ingredient ingredient = new Ingredient("skladnik", true);
         Fridge fridge = new Fridge(user, ingredient);
-        when(fridgeRepository.findByUserAndIngredient(user,ingredient)).thenReturn(fridge);
-        fridgeService.deleteIngredient(ingredient,user);
-        Mockito.verify(fridgeRepository,times(1)).delete(fridge);
+        when(fridgeRepository.findByUserAndIngredient(user, ingredient)).thenReturn(fridge);
+        fridgeService.deleteIngredient(ingredient, user);
+        Mockito.verify(fridgeRepository, times(1)).delete(fridge);
     }
 
     @Test
     public void hasIngredientExist() {
         Ingredient ingredient = new Ingredient("skladnik", true);
         Fridge fridge = spy(new Fridge(user, ingredient));
-        when(fridgeRepository.findByIngredient(ingredient)).thenReturn(fridge);
-        boolean exist = fridgeService.hasIngredient(ingredient);
-        assertEquals(true,exist);
+        when(fridgeRepository.findByUserAndIngredient(user, ingredient)).thenReturn(fridge);
+        boolean exist = fridgeService.hasIngredient(ingredient, user);
+        assertEquals(true, exist);
     }
 
     @Test
     public void hasIngredientNotExist() {
         Ingredient ingredient = new Ingredient("skladnik", true);
-        when(fridgeRepository.findByIngredient(ingredient)).thenReturn(null);
-        boolean exist = fridgeService.hasIngredient(ingredient);
-        assertEquals(false,exist);
+        when(fridgeRepository.findByUserAndIngredient(user, ingredient)).thenReturn(null);
+        boolean exist = fridgeService.hasIngredient(ingredient, user);
+        assertEquals(false, exist);
     }
 
     @Test
     public void clearFridge() {
         fridgeService.clearFridge(user);
-        Mockito.verify(fridgeRepository,times(1)).deleteAllByUser(user);
+        Mockito.verify(fridgeRepository, times(1)).deleteAllByUser(user);
     }
 }
