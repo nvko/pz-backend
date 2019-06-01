@@ -34,6 +34,7 @@ public class RecipesService {
         return recipeRepository.findAll(PageRequest.of(page, limit, Sort.by(sort))).getContent();
     }
 
+    //TODO: sort
     public List<Recipe> findByIngredients(int page, int limit, String sort, Set<Ingredient> ingredients) {
         List<RecipeIngredients> recipeIngredients = new ArrayList<>();
         List<Recipe> finalRecipes = new ArrayList<>();
