@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pz.recipes.recipes.domain.Recipe;
 import pz.recipes.recipes.domain.User;
+import pz.recipes.recipes.recipes.dto.RecipesResponse;
 import pz.recipes.recipes.users.service.UsersService;
 
 import java.util.List;
@@ -20,7 +21,7 @@ public class UsersController {
     private UsersService userService;
 
     @GetMapping("")
-    public ResponseEntity<?> getUsers(@RequestParam(value = "page", defaultValue = "1") int page,
+    public ResponseEntity<?> getUsers(@RequestParam(value = "page", defaultValue = "0") int page,
                                       @RequestParam(value = "limit", defaultValue = "10", required = false) int limit,
                                       @RequestParam(value = "sort", required = false, defaultValue = "id") String sort) {
         return new ResponseEntity<>(userService.findAll(page, limit, sort), HttpStatus.OK);
@@ -33,8 +34,10 @@ public class UsersController {
 
 
     @GetMapping(path = "/{id}/recipes")
-    public ResponseEntity<List<Recipe>> getUsersRecipes(@PathVariable Long id) {
-        return new ResponseEntity<>(userService.findAllByUser(id), HttpStatus.OK);
+    public ResponseEntity<?> getUsersRecipes(@RequestParam(value = "page", defaultValue = "0") int page,
+                                             @RequestParam(value = "limit", defaultValue = "10", required = false) int limit,
+                                             @PathVariable Long id) {
+        return new ResponseEntity<>(new RecipesResponse(userService.findAllByUser(id, page, limit)), HttpStatus.OK);
     }
 
 }

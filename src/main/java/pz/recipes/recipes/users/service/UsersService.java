@@ -40,9 +40,9 @@ public class UsersService {
         return user != null;
     }
 
-    public List<Recipe> findAllByUser(Long id) {
+    public List<Recipe> findAllByUser(Long id, int page, int limit) {
         User user = usersRepository.findById(id).get();
-        return recipesRepository.findAllByUser(user);
+        return recipesRepository.findAllByUser(user, PageRequest.of(page, limit));
     }
 
 }

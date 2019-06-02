@@ -24,7 +24,7 @@ public class SearchController {
     }
 
     @GetMapping("/recipes")
-    public ResponseEntity<?> getRecipesByQuery(@RequestParam(value = "page", defaultValue = "1") int page,
+    public ResponseEntity<?> getRecipesByQuery(@RequestParam(value = "page", defaultValue = "0") int page,
                                                @RequestParam(value = "limit", defaultValue = "10", required = false) int limit,
                                                @RequestParam(value = "query", defaultValue = "") String query) {
         if (query != null) {
@@ -35,7 +35,7 @@ public class SearchController {
 
     // TODO: sort
     @PostMapping("/recipes")
-    public ResponseEntity<?> getRecipesByIngredients(@RequestParam(value = "page", defaultValue = "1") int page,
+    public ResponseEntity<?> getRecipesByIngredients(@RequestParam(value = "page", defaultValue = "0") int page,
                                                      @RequestParam(value = "limit", defaultValue = "10", required = false) int limit,
                                                      @RequestParam(value = "sort", defaultValue = "id") String sort,
                                                      @RequestBody RecipesRequest recipesRequest) {

@@ -24,9 +24,9 @@ public class SearchService {
         return ingredientsRepository.findAllByQuery(query);
     }
 
-    public List<Recipe> findAllByUser(String username) {
+    public List<Recipe> findAllByUser(String username, int page, int limit) {
         User user = usersRepository.findByUsername(username);
-        return recipesRepository.findAllByUser(user);
+        return recipesRepository.findAllByUser(user, PageRequest.of(page, limit));
     }
 
     public List<Recipe> findByQuery(String query, int page, int limit) {

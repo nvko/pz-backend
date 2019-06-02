@@ -13,7 +13,7 @@ import java.util.List;
 @Repository
 public interface RecipesRepository extends JpaRepository<Recipe, Long> {
 
-    List<Recipe> findAllByUser(User user);
+    List<Recipe> findAllByUser(User user, Pageable pageable);
 
     @Query("SELECT r FROM Recipe r WHERE r.title LIKE CONCAT('%',:query,'%')")
     List<Recipe> findAllByQuery( @Param("query") String query, Pageable pageable);
