@@ -29,7 +29,7 @@ public class SearchService {
         return recipesRepository.findAllByUser(user);
     }
 
-    public List<Recipe> findByQuery(int page, int limit, String sort, String query) {
-        return recipesRepository.findAllByQuery(PageRequest.of(page, limit), query);
+    public List<Recipe> findByQuery(String query, int page, int limit) {
+        return recipesRepository.findAllByQuery(query, PageRequest.of(page, limit));
     }
 }

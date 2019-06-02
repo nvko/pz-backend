@@ -23,14 +23,12 @@ public class SearchController {
         return new ResponseEntity<>(new SearchResponse<>(searchService.findAllIngredientsByQuery(query)), HttpStatus.OK);
     }
 
-    // TODO: sort
     @GetMapping("/recipes")
     public ResponseEntity<?> getRecipesByQuery(@RequestParam(value = "page", defaultValue = "1") int page,
                                                @RequestParam(value = "limit", defaultValue = "10", required = false) int limit,
-                                               @RequestParam(value = "sort", defaultValue = "id") String sort,
                                                @RequestParam(value = "query", defaultValue = "") String query) {
         if (query != null) {
-            return new ResponseEntity<>(new RecipesResponse(searchService.findByQuery(page, limit, sort, query)), HttpStatus.OK);
+            return new ResponseEntity<>(new RecipesResponse(searchService.findByQuery(query, page, limit)), HttpStatus.OK);
         }
         return new ResponseEntity<>(new MessageResponse("Bad request"), HttpStatus.BAD_REQUEST);
     }
