@@ -24,7 +24,7 @@ public class Recipe implements Serializable {
     private String title;
 
     @NotEmpty
-    @Column(length = 1000)
+    @Column(length = 5000)
     private String description;
 
     @ManyToOne
