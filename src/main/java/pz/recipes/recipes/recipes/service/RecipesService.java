@@ -42,18 +42,23 @@ public class RecipesService {
         List<Recipe> recipes = new ArrayList<>();
 
         // przejdź po składnikach requestu i wybierz wszystkie przepisy, które zawierają chociaż jeden składnik
-        for(Ingredient ingredient: ingredients) {
+        for (Ingredient ingredient : ingredients) {
             recipeIngredients.addAll(recipeIngredientsRepository.findAllByIngredient(ingredient));
         }
         // wrzuć przepisy do osobnej listy i do setu
-        for(RecipeIngredients r: recipeIngredients) {
+        for (RecipeIngredients r : recipeIngredients) {
             recipes.add(r.recipe);
             recipeIngredientsFiltered.add(r.recipe);
         }
         // przeiteruj po secie (żeby się nie powtarzać) i sprawdź, które z przepisów mają tylko pożądane składniki
-        for(Recipe r: recipeIngredientsFiltered) {
+        for (Recipe r : recipeIngredientsFiltered) {
             int occurencies = Collections.frequency(recipes, r);
-            if(occurencies == ingredients.size() && r.getIngredients().size() == ingredients.size()) {
+//          przepisy, które posiadają tylko te składniki, które wysłalismy
+//            if(occurencies == ingredients.size() && r.getIngredients().size() == ingredients.size()) {
+//                finalRecipes.add(r);
+//            }
+//          przepisy, które zawierają w sobie składniki przesłane i inne
+            if (occurencies == ingredients.size()) {
                 finalRecipes.add(r);
             }
         }
