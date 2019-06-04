@@ -56,18 +56,19 @@ public class AccountController {
     }
 
     @PutMapping("/avatar")
-    public ResponseEntity<?> changeAvatar(Authentication authentication,
+    public String changeAvatar(Authentication authentication,
                                           @RequestParam("file") MultipartFile file,
                                           HttpServletRequest request) {
+        String path = "";
         try {
             String fileName = file.getOriginalFilename();
-            String path = request.getServletContext().getRealPath("") + "uploads\\avatars" + File.separator + authentication.getName() + fileName.substring(fileName.length() - 4);
+            path = request.getServletContext().getRealPath("") + "uploads\\avatars" + File.separator + authentication.getName() + fileName.substring(fileName.length() - 4);
             System.out.println(path);
 //            saveFile(file.getInputStream(), path);
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
-        return null;
+        return path;
     }
 
     private void saveFile(InputStream inputStream, String path) {
