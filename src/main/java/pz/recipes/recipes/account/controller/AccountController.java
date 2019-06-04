@@ -5,10 +5,18 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import pz.recipes.recipes.MessageResponse;
 import pz.recipes.recipes.account.dto.AccountRequest;
 import pz.recipes.recipes.account.service.AccountService;
 import pz.recipes.recipes.users.service.UsersService;
+
+import javax.servlet.http.HttpServletRequest;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.util.Date;
 
 @RestController
 @RequestMapping("account")
@@ -27,7 +35,8 @@ public class AccountController {
     }
 
     @PutMapping("/email")
-    public ResponseEntity<?> updateEmail(Authentication authentication, @RequestBody AccountRequest accountRequest) {
+    public ResponseEntity<?> updateEmail(Authentication authentication,
+                                         @RequestBody AccountRequest accountRequest) {
         if (userService.ifEmailExists(accountRequest.getEmail())) {
             return new ResponseEntity<>(new MessageResponse("This email address is already taken"), HttpStatus.CONFLICT);
         } else {
@@ -37,20 +46,42 @@ public class AccountController {
     }
 
     @PutMapping("/password")
-    public ResponseEntity<?> changePassword(Authentication authentication, @RequestBody AccountRequest accountRequest) {
-        if(!accountRequest.getPassword().equals(accountRequest.getConfirmPassword())) {
+    public ResponseEntity<?> changePassword(Authentication authentication,
+                                            @RequestBody AccountRequest accountRequest) {
+        if (!accountRequest.getPassword().equals(accountRequest.getConfirmPassword())) {
             return new ResponseEntity<>(new MessageResponse("Passwords are not the same"), HttpStatus.OK);
         }
         accountService.changePassword(authentication.getName(), accountRequest.getPassword());
         return new ResponseEntity<>(new MessageResponse("Your password has been changed"), HttpStatus.OK);
-
     }
 
+    @PutMapping("/avatar")
+    public ResponseEntity<?> changeAvatar(Authentication authentication,
+                                          @RequestParam("file") MultipartFile file,
+                                          HttpServletRequest request) {
+        try {
+            String fileName = file.getOriginalFilename();
+            String path = request.getServletContext().getRealPath("") + "uploads\\avatars" + File.separator + authentication.getName() + fileName.substring(fileName.length() - 4);
+            System.out.println(path);
+//            saveFile(file.getInputStream(), path);
+        } catch (NullPointerException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
-
-
-
-
-
-
+    private void saveFile(InputStream inputStream, String path) {
+        try {
+            OutputStream outputStream = new FileOutputStream((new File(path)));
+            int read = 0;
+            byte[] bytes = new byte[1024];
+            while ((read = inputStream.read(bytes)) != -1) {
+                outputStream.write(bytes, 0, read);
+            }
+            outputStream.flush();
+            outputStream.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

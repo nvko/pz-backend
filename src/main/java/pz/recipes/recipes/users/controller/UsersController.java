@@ -4,12 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import pz.recipes.recipes.domain.Recipe;
 import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.recipes.dto.RecipesResponse;
 import pz.recipes.recipes.users.service.UsersService;
-
-import java.util.List;
 
 import static org.springframework.http.ResponseEntity.ok;
 
