@@ -31,7 +31,7 @@ public class RecipeServiceTest {
 
     @Before
     public void setUp() {
-        user = new User("User","email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false);
+        user = new User("User","email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false, "default.jpg");
 
     }
 

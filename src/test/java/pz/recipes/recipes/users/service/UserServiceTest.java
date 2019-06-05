@@ -32,7 +32,7 @@ public class UserServiceTest {
 
     @Test
     public void findById() {
-        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false);
+        User user = new User("User","email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false, "default.jpg");
         Long id = 12L;
         when(userRepository.findById(id)).thenReturn(Optional.ofNullable(user));
         User byId = userService.findById(id);
@@ -41,7 +41,7 @@ public class UserServiceTest {
 
     @Test
     public void findAll() {
-        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false);
+        User user = new User("User","email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false, "default.jpg");
         Page<User> pageUsers = new PageImpl<>(Collections.singletonList(user));
         when(userRepository.findAll(PageRequest.of(10, 10, Sort.by("username")))).thenReturn(pageUsers);
         List<User> users = userService.findAll(10, 10, "username");
@@ -50,7 +50,7 @@ public class UserServiceTest {
 
     @Test
     public void findByUsername() {
-        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false);
+        User user = new User("User","email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false, "default.jpg");
         when(userRepository.findByUsername(user.getUsername())).thenReturn(user);
         User byId = userService.findByUsername(user.getUsername());
         assertEquals(user,byId);
@@ -58,7 +58,7 @@ public class UserServiceTest {
 
     @Test
     public void ifUsernameExists() {
-        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false);
+        User user = new User("User","email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false, "default.jpg");
         when(userRepository.findByUsername(user.getUsername())).thenReturn(user);
         boolean isExist = userService.ifUsernameExists(user.getUsername());
         assertEquals(true,isExist);
@@ -73,7 +73,7 @@ public class UserServiceTest {
 
     @Test
     public void ifEmailExists() {
-        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false);
+        User user = new User("User","email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false, "default.jpg");
         when(userRepository.findByEmail(user.getEmail())).thenReturn(user);
         boolean isExist = userService.ifEmailExists(user.getEmail());
         assertEquals(true,isExist);

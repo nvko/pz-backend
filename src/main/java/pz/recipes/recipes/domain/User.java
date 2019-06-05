@@ -46,12 +46,16 @@ public class User implements Serializable {
     @JsonIgnore
     private Set<Fridge> fridge;
 
-    public User(@NotEmpty String username, @NotEmpty String email, @NotEmpty String password, List<Role> roles, boolean vege) {
+    @NotEmpty
+    private String avatarPath;
+
+    public User(@NotEmpty String username, @NotEmpty String email, @NotEmpty String password, List<Role> roles, boolean vege, @NotEmpty String avatarPath) {
         this.username = username;
         this.email = email;
         this.password = password;
         this.roles = roles;
         this.vege = vege;
+        this.avatarPath = avatarPath;
     }
 
     public Long getId() {
@@ -94,6 +98,14 @@ public class User implements Serializable {
         this.vege = vege;
     }
 
+    public String getAvatarPath() {
+        return avatarPath;
+    }
+
+    public void setAvatarPath(String avatarPath) {
+        this.avatarPath = avatarPath;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -105,12 +117,12 @@ public class User implements Serializable {
                 Objects.equals(password, user.password) &&
                 Objects.equals(roles, user.roles) &&
                 Objects.equals(vege, user.vege) &&
-                Objects.equals(fridge, user.fridge);
+                Objects.equals(fridge, user.fridge) &&
+                Objects.equals(avatarPath, user.avatarPath);
     }
 
     @Override
     public int hashCode() {
-
-        return Objects.hash(id, username, email, password, roles, vege, fridge);
+        return Objects.hash(id, username, email, password, roles, vege, fridge, avatarPath);
     }
 }

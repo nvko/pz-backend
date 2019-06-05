@@ -34,4 +34,10 @@ public class AccountService {
         userRepository.save(user);
     }
 
+    public void updateAvatar(String username, String avatarPath) {
+        User user = userRepository.findByUsername(username);
+        user.setAvatarPath(avatarPath);
+        userRepository.save(user);
+    }
+
 }

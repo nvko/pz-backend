@@ -9,14 +9,13 @@ import org.springframework.web.multipart.MultipartFile;
 import pz.recipes.recipes.MessageResponse;
 import pz.recipes.recipes.account.dto.AccountRequest;
 import pz.recipes.recipes.account.service.AccountService;
+import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.users.service.UsersService;
 
 import javax.servlet.http.HttpServletRequest;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
 import java.util.Date;
+import java.util.NoSuchElementException;
 
 @RestController
 @RequestMapping("account")
@@ -56,19 +55,20 @@ public class AccountController {
     }
 
     @PutMapping("/avatar")
-    public String changeAvatar(Authentication authentication,
-                                          @RequestParam("file") MultipartFile file,
-                                          HttpServletRequest request) {
-        String path = "";
+    public ResponseEntity<?> changeAvatar(Authentication authentication,
+                                          @RequestParam("file") MultipartFile file) {
+        String path;
         try {
             String fileName = file.getOriginalFilename();
-            path = request.getServletContext().getRealPath("") + "uploads\\avatars" + File.separator + authentication.getName() + fileName.substring(fileName.length() - 4);
-            System.out.println(path);
-//            saveFile(file.getInputStream(), path);
-        } catch (NullPointerException e) {
-            e.printStackTrace();
+            String finalFileName = authentication.getName() + fileName.substring(fileName.indexOf("."));
+            path = System.getProperty("user.dir") + "\\images\\avatars" + File.separator + finalFileName;
+            saveFile(file.getInputStream(), path);
+            accountService.updateAvatar(authentication.getName(), finalFileName);
+
+        } catch (NullPointerException | IOException | NoSuchElementException e) {
+            return new ResponseEntity<>(new MessageResponse("Error while uploading image."), HttpStatus.BAD_REQUEST);
         }
-        return path;
+        return new ResponseEntity<>(new MessageResponse("Image uploaded successfully"), HttpStatus.OK);
     }
 
     private void saveFile(InputStream inputStream, String path) {

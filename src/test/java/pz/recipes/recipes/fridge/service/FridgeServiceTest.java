@@ -38,7 +38,7 @@ public class FridgeServiceTest {
 
     @Before
     public void setUp() {
-        user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true);
+        user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true, "default.jpg");
     }
 
     @Test

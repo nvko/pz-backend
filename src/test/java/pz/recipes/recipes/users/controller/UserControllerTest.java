@@ -39,7 +39,7 @@ public class UserControllerTest {
     @Test
     public void getUser() {
         Long id = 13L;
-        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_ADMIN), true);
+        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_ADMIN), true, "default.jpg");
         when(userService.findById(id)).thenReturn(user);
         ResponseEntity<User> responseEntity = userController.getUser(id);
         assertEquals(responseEntity, ok(userService.findById(id)));

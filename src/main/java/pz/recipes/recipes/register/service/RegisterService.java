@@ -19,7 +19,11 @@ public class RegisterService {
     private PasswordEncoder passwordEncoder;
 
     public void register(RegisterRequest registerRequest) {
-        User user = new User(registerRequest.getUsername(), registerRequest.getEmail(), passwordEncoder.encode(registerRequest.getPassword()), Collections.singletonList(Role.ROLE_USER), false);
+        User user = new User(registerRequest.getUsername(),
+                registerRequest.getEmail(),
+                passwordEncoder.encode(registerRequest.getPassword()),
+                Collections.singletonList(Role.ROLE_USER),
+                false, "default.jpg");
         userRepository.save(user);
     }
 

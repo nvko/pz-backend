@@ -33,7 +33,7 @@ public class AccountServiceTest {
 
     @Before
     public void setUp() {
-        user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_ADMIN), true);
+        user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_ADMIN), true, "default.jpg");
     }
 
     @Test

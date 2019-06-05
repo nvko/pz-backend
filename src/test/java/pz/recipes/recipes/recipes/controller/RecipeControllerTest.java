@@ -47,8 +47,8 @@ public class RecipeControllerTest {
 
     @Test
     public void getRecipe() {
-        Long id=12L;
-        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true);
+        Long id = 12L;
+        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true, "default.jpg");
         Recipe recipe = new Recipe("recipeTitle", "recipeDescription", user, true);
         ResponseEntity<?> expectedResponse = new ResponseEntity<>(recipe, HttpStatus.OK);
         when(recipeService.findById(id)).thenReturn(recipe);
@@ -62,26 +62,27 @@ public class RecipeControllerTest {
         when(recipeRequest.hasSomethingNull()).thenReturn(true);
         ResponseEntity<?> expectedResponse = new ResponseEntity<>(new MessageResponse("Request is invalid"), HttpStatus.CONFLICT);
         ResponseEntity responseEntity = recipeController.addRecipe(authentication, recipeRequest);
-        assertEquals(expectedResponse,responseEntity);
+        assertEquals(expectedResponse, responseEntity);
     }
 
     @Test
     public void addRecipeUserExist() {
-        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true);
+        User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true, "default.jpg");
         RecipesRequest recipeRequest = mock(RecipesRequest.class);
         when(recipeRequest.hasSomethingNull()).thenReturn(false);
         when(userService.findByUsername(authentication.getName())).thenReturn(user);
         ResponseEntity responseEntity = recipeController.addRecipe(authentication, recipeRequest);
-        verify(recipeService,times(1)).addRecipe(user,recipeRequest);
-        assertEquals(HttpStatus.OK,responseEntity.getStatusCode());
+        verify(recipeService, times(1)).addRecipe(user, recipeRequest);
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
     }
+
     @Test
     public void addRecipeUserDoNotExist() {
         RecipesRequest recipeRequest = mock(RecipesRequest.class);
         when(recipeRequest.hasSomethingNull()).thenReturn(false);
         when(userService.findByUsername(authentication.getName())).thenReturn(null);
         ResponseEntity responseEntity = recipeController.addRecipe(authentication, recipeRequest);
-        assertEquals(HttpStatus.UNAUTHORIZED,responseEntity.getStatusCode());
+        assertEquals(HttpStatus.UNAUTHORIZED, responseEntity.getStatusCode());
     }
 
     @Test
@@ -89,46 +90,47 @@ public class RecipeControllerTest {
         RecipesRequest recipeRequest = mock(RecipesRequest.class);
         when(recipeRequest.hasSomethingNull()).thenReturn(true);
         ResponseEntity<?> expectedResponse = new ResponseEntity<>(new MessageResponse("Request is invalid"), HttpStatus.CONFLICT);
-        ResponseEntity responseEntity = recipeController.updateRecipe(authentication,12L, recipeRequest);
-        assertEquals(expectedResponse,responseEntity);
+        ResponseEntity responseEntity = recipeController.updateRecipe(authentication, 12L, recipeRequest);
+        assertEquals(expectedResponse, responseEntity);
     }
 
     @Test
     public void updateRecipeUserExist() {
         RecipesRequest recipeRequest = mock(RecipesRequest.class);
-        configStubs(13, 13,recipeRequest);
+        configStubs(13, 13, recipeRequest);
         ResponseEntity<?> responseEntity = recipeController.updateRecipe(authentication, 13L, recipeRequest);
-        assertEquals(HttpStatus.OK,responseEntity.getStatusCode());
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
     }
+
     @Test
     public void updateRecipeUserDoNotExist() {
         RecipesRequest recipeRequest = mock(RecipesRequest.class);
-        configStubs(12, 16,recipeRequest);
+        configStubs(12, 16, recipeRequest);
         ResponseEntity<?> responseEntity = recipeController.updateRecipe(authentication, 12L, recipeRequest);
-        assertEquals(HttpStatus.UNAUTHORIZED,responseEntity.getStatusCode());
+        assertEquals(HttpStatus.UNAUTHORIZED, responseEntity.getStatusCode());
     }
 
 
     @Test
     public void correctDeleteRecipe() {
         RecipesRequest recipeRequest = mock(RecipesRequest.class);
-        configStubs(12L,12L,recipeRequest);
+        configStubs(12L, 12L, recipeRequest);
         ResponseEntity<?> responseEntity = recipeController.deleteRecipe(authentication, 12L);
-        assertEquals(HttpStatus.OK,responseEntity.getStatusCode());
+        assertEquals(HttpStatus.OK, responseEntity.getStatusCode());
     }
 
 
     @Test
     public void incorrectDeleteRecipe() {
         RecipesRequest recipeRequest = mock(RecipesRequest.class);
-        configStubs(12L,13L,recipeRequest);
+        configStubs(12L, 13L, recipeRequest);
         ResponseEntity<?> responseEntity = recipeController.deleteRecipe(authentication, 12L);
-        assertEquals(HttpStatus.UNAUTHORIZED,responseEntity.getStatusCode());
+        assertEquals(HttpStatus.UNAUTHORIZED, responseEntity.getStatusCode());
     }
 
-    public void configStubs(long idFirstUser,long idSecondUser,RecipesRequest recipeRequest) {
-        User user = spy(new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true));
-        User anotherUser = spy(new User("User2", "email2@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true));
+    public void configStubs(long idFirstUser, long idSecondUser, RecipesRequest recipeRequest) {
+        User user = spy(new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true, "default.jpg"));
+        User anotherUser = spy(new User("User2", "email2@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true, "default.jpg"));
         Recipe recipe = spy(new Recipe("recipeTitle", "recipeDescription", user, true));
         when(user.getId()).thenReturn(idFirstUser);
         when(anotherUser.getId()).thenReturn(idSecondUser);

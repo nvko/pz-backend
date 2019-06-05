@@ -12,6 +12,7 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import pz.recipes.recipes.security.jwt.JwtAuthenticationEntryPoint;
 import pz.recipes.recipes.security.jwt.JwtAuthenticationFilter;
 
@@ -38,6 +39,7 @@ public class GlobalConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.authorizeRequests()
                 .antMatchers("/login").permitAll()
                 .antMatchers("/register").permitAll()
+                .antMatchers(("/images/**")).permitAll()
                 .anyRequest().authenticated();
 
         httpSecurity
