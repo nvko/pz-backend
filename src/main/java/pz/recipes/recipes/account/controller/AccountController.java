@@ -62,7 +62,7 @@ public class AccountController {
         try {
             String fileName = file.getOriginalFilename();
             String finalFileName = authentication.getName() + fileName.substring(fileName.indexOf("."));
-            path = System.getProperty("user.dir") + "\\images\\avatars" + File.separator + finalFileName;
+            path = request.getServletContext().getRealPath("") + "\\WEB-INF\\images\\avatars" + File.separator + finalFileName;
             saveFile(file.getInputStream(), path);
 //            accountService.updateAvatar(authentication.getName(), finalFileName);
 

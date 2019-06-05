@@ -1,5 +1,6 @@
 package pz.recipes.recipes.security;
 
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -12,7 +13,6 @@ import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import pz.recipes.recipes.security.jwt.JwtAuthenticationEntryPoint;
 import pz.recipes.recipes.security.jwt.JwtAuthenticationFilter;
 
