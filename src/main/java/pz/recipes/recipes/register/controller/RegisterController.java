@@ -22,7 +22,9 @@ public class RegisterController {
 
     @PostMapping("")
     public ResponseEntity<?> register(@RequestBody RegisterRequest registerRequest) {
-        if (userService.ifUsernameExists(registerRequest.getUsername())) {
+        if (registerRequest.getUsername().equals("default")) {
+            return ResponseEntity.status(409).body(new MessageResponse("This username is forbidden."));
+        } else if (userService.ifUsernameExists(registerRequest.getUsername())) {
             return ResponseEntity.status(409).body(new MessageResponse("This username already exists"));
         } else if (userService.ifEmailExists(registerRequest.getEmail())) {
             return ResponseEntity.status(409).body(new MessageResponse("This email is already taken"));

@@ -55,9 +55,9 @@ public class AccountController {
     }
 
     @PutMapping("/avatar")
-    public ResponseEntity<?> changeAvatar(Authentication authentication,
+    public String changeAvatar(Authentication authentication,
                                           @RequestParam("file") MultipartFile file) {
-        String path;
+        String path = "";
         try {
             String fileName = file.getOriginalFilename();
             String finalFileName = authentication.getName() + fileName.substring(fileName.indexOf("."));
@@ -66,9 +66,10 @@ public class AccountController {
             accountService.updateAvatar(authentication.getName(), finalFileName);
 
         } catch (NullPointerException | IOException | NoSuchElementException e) {
-            return new ResponseEntity<>(new MessageResponse("Error while uploading image."), HttpStatus.BAD_REQUEST);
+//            return new ResponseEntity<>(new MessageResponse("Error while uploading image."), HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>(new MessageResponse("Image uploaded successfully"), HttpStatus.OK);
+        return path;
+//        return new ResponseEntity<>(new MessageResponse("Image uploaded successfully"), HttpStatus.OK);
     }
 
     private void saveFile(InputStream inputStream, String path) {
