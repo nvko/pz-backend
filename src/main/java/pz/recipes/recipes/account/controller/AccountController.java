@@ -56,14 +56,15 @@ public class AccountController {
 
     @PutMapping("/avatar")
     public String changeAvatar(Authentication authentication,
-                                          @RequestParam("file") MultipartFile file) {
+                               @RequestParam("file") MultipartFile file,
+                               HttpServletRequest request) {
         String path = "";
         try {
             String fileName = file.getOriginalFilename();
             String finalFileName = authentication.getName() + fileName.substring(fileName.indexOf("."));
-            path = System.getProperty("user.dir") + "\\images\\avatars" + File.separator + finalFileName;
+            path = request.getServletPath() + "\\images\\avatars" + File.separator + finalFileName;
             saveFile(file.getInputStream(), path);
-            accountService.updateAvatar(authentication.getName(), finalFileName);
+//            accountService.updateAvatar(authentication.getName(), finalFileName);
 
         } catch (NullPointerException | IOException | NoSuchElementException e) {
 //            return new ResponseEntity<>(new MessageResponse("Error while uploading image."), HttpStatus.BAD_REQUEST);
