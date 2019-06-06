@@ -61,8 +61,12 @@ public class AccountController {
 //            String finalFileName = authentication.getName() + fileName.substring(fileName.indexOf("."));
 //            path = request.getServletContext().getRealPath("")+ "\\images\\avatars" + File.separator + finalFileName;
 //            saveFile(file.getInputStream(), path);
-        accountService.updateAvatar(authentication.getName(), accountRequest.getAvatarPath());
-        return new ResponseEntity<>(new MessageResponse("Avatar updated successfully"), HttpStatus.OK);
+        if (accountRequest.getAvatarPath() != null) {
+            accountService.updateAvatar(authentication.getName(), accountRequest.getAvatarPath());
+            return new ResponseEntity<>(new MessageResponse("Avatar updated successfully"), HttpStatus.OK);
+        } else {
+            return new ResponseEntity<>(new MessageResponse("Error while updating avatar"), HttpStatus.BAD_REQUEST);
+        }
     }
 
     private void saveFile(InputStream inputStream, String path) {
