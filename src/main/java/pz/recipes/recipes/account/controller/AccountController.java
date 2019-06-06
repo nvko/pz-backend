@@ -55,22 +55,14 @@ public class AccountController {
     }
 
     @PutMapping("/avatar")
-    public String changeAvatar(Authentication authentication,
-                               @RequestParam("file") MultipartFile file,
-                               HttpServletRequest request) {
-        String path = "";
-        try {
-            String fileName = file.getOriginalFilename();
-            String finalFileName = authentication.getName() + fileName.substring(fileName.indexOf("."));
-            path = request.getServletContext().getRealPath("") + "\\WEB-INF\\images\\avatars" + File.separator + finalFileName;
-            saveFile(file.getInputStream(), path);
-//            accountService.updateAvatar(authentication.getName(), finalFileName);
-
-        } catch (NullPointerException | IOException | NoSuchElementException e) {
-//            return new ResponseEntity<>(new MessageResponse("Error while uploading image."), HttpStatus.BAD_REQUEST);
-        }
-        return path;
-//        return new ResponseEntity<>(new MessageResponse("Image uploaded successfully"), HttpStatus.OK);
+    public ResponseEntity<?> changeAvatar(Authentication authentication, @RequestBody AccountRequest accountRequest,
+                                          HttpServletRequest request) {
+//            String fileName = file.getOriginalFilename();
+//            String finalFileName = authentication.getName() + fileName.substring(fileName.indexOf("."));
+//            path = request.getServletContext().getRealPath("")+ "\\images\\avatars" + File.separator + finalFileName;
+//            saveFile(file.getInputStream(), path);
+        accountService.updateAvatar(authentication.getName(), accountRequest.getAvatarPath());
+        return new ResponseEntity<>(new MessageResponse("Avatar updated successfully"), HttpStatus.OK);
     }
 
     private void saveFile(InputStream inputStream, String path) {
@@ -87,4 +79,5 @@ public class AccountController {
             e.printStackTrace();
         }
     }
+
 }

@@ -8,6 +8,7 @@ public class AccountRequest {
     private String email;
     private String password;
     private String confirmPassword;
+    private String avatarPath;
 
     public AccountRequest(String email) {
         this.email = email;
@@ -16,6 +17,14 @@ public class AccountRequest {
     public AccountRequest(String password, String confirmPassword) {
         this.password = password;
         this.confirmPassword = confirmPassword;
+    }
+
+    public String getAvatarPath() {
+        return avatarPath;
+    }
+
+    public void setAvatarPath(String avatarPath) {
+        this.avatarPath = avatarPath;
     }
 
     public String getEmail() {
