@@ -50,4 +50,9 @@ public class AccountRequest {
     public void setConfirmPassword(String confirmPassword) {
         this.confirmPassword = confirmPassword;
     }
+
+    @Override
+    public String toString() {
+        return getEmail() + " " + getAvatarPath();
+    }
 }
