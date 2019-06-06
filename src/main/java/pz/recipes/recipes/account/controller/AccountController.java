@@ -62,7 +62,6 @@ public class AccountController {
 //            path = request.getServletContext().getRealPath("")+ "\\images\\avatars" + File.separator + finalFileName;
 //            saveFile(file.getInputStream(), path);
         if (accountRequest.getAvatarPath() != null) {
-            System.out.println(accountRequest.toString());
             accountService.updateAvatar(authentication.getName(), accountRequest.getAvatarPath());
             return new ResponseEntity<>(new MessageResponse("Avatar updated successfully"), HttpStatus.OK);
         } else {

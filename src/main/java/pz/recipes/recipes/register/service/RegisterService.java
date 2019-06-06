@@ -23,7 +23,7 @@ public class RegisterService {
                 registerRequest.getEmail(),
                 passwordEncoder.encode(registerRequest.getPassword()),
                 Collections.singletonList(Role.ROLE_USER),
-                false, "default.jpg");
+                false, "https://team-recipes.herokuapp.com/images/avatars/default.jpg");
         userRepository.save(user);
     }
 
