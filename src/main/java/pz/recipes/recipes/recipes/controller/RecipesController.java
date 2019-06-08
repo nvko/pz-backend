@@ -6,6 +6,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 import pz.recipes.recipes.MessageResponse;
+import pz.recipes.recipes.domain.Role;
 import pz.recipes.recipes.domain.User;
 import pz.recipes.recipes.recipes.dto.RecipesRequest;
 import pz.recipes.recipes.recipes.dto.RecipesResponse;
@@ -52,7 +53,7 @@ public class RecipesController {
             return new ResponseEntity<>(new MessageResponse("Request is invalid"), HttpStatus.CONFLICT);
         } else {
             User user = userService.findByUsername(authentication.getName());
-            if (user.getId().equals(recipeService.findById(id).getUser().getId())) {
+            if (user.getId().equals(recipeService.findById(id).getUser().getId()) || user.getRoles().contains( Role.ROLE_ADMIN) ) {
                 recipeService.updateRecipe(recipeRequest, id);
                 return new ResponseEntity<>(HttpStatus.OK);
             } else {
@@ -64,7 +65,7 @@ public class RecipesController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteRecipe(Authentication authentication, @PathVariable(name = "id") Long id) {
         User user = userService.findByUsername(authentication.getName());
-        if (user.getId().equals(recipeService.findById(id).getUser().getId())) {
+        if (user.getId().equals(recipeService.findById(id).getUser().getId()) || user.getRoles().contains( Role.ROLE_ADMIN) ) {
             recipeService.deleteRecipe(id);
             return new ResponseEntity<>(HttpStatus.OK);
         } else {
