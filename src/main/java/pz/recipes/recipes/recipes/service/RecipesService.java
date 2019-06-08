@@ -76,6 +76,7 @@ public class RecipesService {
             recipe.setTitle(recipeRequest.getTitle());
             recipe.setDescription(recipeRequest.getDescription());
             recipe.setVege(recipeRequest.getVege());
+            recipe.setImgPath(recipeRequest.getImgPath());
             recipeIngredientsRepository.deleteAllByRecipe(recipe);
             saveRecipeAndItsIngredients(recipeRequest, recipe);
         }
