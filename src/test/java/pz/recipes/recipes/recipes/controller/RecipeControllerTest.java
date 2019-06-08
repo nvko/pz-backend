@@ -49,7 +49,7 @@ public class RecipeControllerTest {
     public void getRecipe() {
         Long id = 12L;
         User user = new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true, "default.jpg");
-        Recipe recipe = new Recipe("recipeTitle", "recipeDescription", user, true);
+        Recipe recipe = new Recipe("recipeTitle", "recipeDescription", user, true, null);
         ResponseEntity<?> expectedResponse = new ResponseEntity<>(recipe, HttpStatus.OK);
         when(recipeService.findById(id)).thenReturn(recipe);
         ResponseEntity<?> responseEntity = recipeController.getRecipe(id);
@@ -131,7 +131,7 @@ public class RecipeControllerTest {
     public void configStubs(long idFirstUser, long idSecondUser, RecipesRequest recipeRequest) {
         User user = spy(new User("User", "email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true, "default.jpg"));
         User anotherUser = spy(new User("User2", "email2@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), true, "default.jpg"));
-        Recipe recipe = spy(new Recipe("recipeTitle", "recipeDescription", user, true));
+        Recipe recipe = spy(new Recipe("recipeTitle", "recipeDescription", user, true, null));
         when(user.getId()).thenReturn(idFirstUser);
         when(anotherUser.getId()).thenReturn(idSecondUser);
         when(recipeRequest.hasSomethingNull()).thenReturn(false);

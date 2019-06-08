@@ -32,14 +32,17 @@ public class Recipe implements Serializable {
 
     private Boolean vege;
 
+    private String imgPath;
+
     @OneToMany(mappedBy = "recipe", fetch = FetchType.LAZY, cascade = CascadeType.REMOVE, orphanRemoval = true)
     private Set<RecipeIngredients> ingredients;
 
-    public Recipe(@NotEmpty String title, @NotEmpty String description, User user, Boolean vege) {
+    public Recipe(@NotEmpty String title, @NotEmpty String description, User user, Boolean vege, String imgPath) {
         this.title = title;
         this.description = description;
         this.user = user;
         this.vege = vege;
+        this.imgPath = imgPath;
     }
 
     public Long getId() {
@@ -84,5 +87,13 @@ public class Recipe implements Serializable {
 
     public void setUser(User user) {
         this.user = user;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
     }
 }

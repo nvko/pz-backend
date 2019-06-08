@@ -9,6 +9,7 @@ public class RecipesRequest {
     private String title;
     private String description;
     private Boolean vege;
+    private String imgPath;
     private Set<Ingredient> ingredients;
 
     public String getTitle() {
@@ -41,6 +42,14 @@ public class RecipesRequest {
 
     public void setIngredients(Set<Ingredient> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
     }
 
     public boolean hasSomethingNull() {

@@ -65,7 +65,7 @@ public class RecipesService {
     }
 
     public void addRecipe(User user, RecipesRequest recipeRequest) {
-        Recipe recipe = new Recipe(recipeRequest.getTitle(), recipeRequest.getDescription(), user, recipeRequest.getVege());
+        Recipe recipe = new Recipe(recipeRequest.getTitle(), recipeRequest.getDescription(), user, recipeRequest.getVege(), recipeRequest.getImgPath());
         saveRecipeAndItsIngredients(recipeRequest, recipe);
     }
 

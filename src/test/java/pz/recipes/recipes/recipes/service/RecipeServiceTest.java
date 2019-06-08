@@ -37,7 +37,7 @@ public class RecipeServiceTest {
 
     @Test
     public void findById() {
-        Recipe recipe = spy(new Recipe("title", "description", user, true));
+        Recipe recipe = spy(new Recipe("title", "description", user, true, null));
         Long id = 12L;
         when(recipeRepository.findById(id)).thenReturn(java.util.Optional.ofNullable(recipe));
         Recipe byId = recipeService.findById(id);
@@ -47,7 +47,7 @@ public class RecipeServiceTest {
     @Test
     public void deleteRecipe() {
         Long id = 3L;
-        Recipe recipe = spy(new Recipe("title", "description", user, true));
+        Recipe recipe = spy(new Recipe("title", "description", user, true, null));
         when(recipeRepository.findById(id)).thenReturn(java.util.Optional.ofNullable(recipe));
         recipeService.deleteRecipe(id);
         verify(recipeRepository,times(1)).delete(recipe);
