@@ -27,9 +27,10 @@ public class RegisterServiceTest {
     @Mock
     PasswordEncoder passwordEncoder;
 
+    //TODO: fix
     @Test
     public void register() {
-        User user = new User("User","email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false, "default.jpg");
+        User user = new User("User","email@interia.pl", "password", Collections.singletonList(Role.ROLE_USER), false, "https://team-recipes.herokuapp.com/images/avatars/default.jpg");
         RegisterRequest registerRequest = mock(RegisterRequest.class);
         when(registerRequest.getUsername()).thenReturn(user.getUsername());
         when(registerRequest.getEmail()).thenReturn(user.getEmail());

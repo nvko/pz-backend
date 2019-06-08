@@ -53,7 +53,7 @@ public class RecipesController {
             return new ResponseEntity<>(new MessageResponse("Request is invalid"), HttpStatus.CONFLICT);
         } else {
             User user = userService.findByUsername(authentication.getName());
-            if (user.getId().equals(recipeService.findById(id).getUser().getId()) || user.getRoles().contains( Role.ROLE_ADMIN) ) {
+            if (user.getId().equals(recipeService.findById(id).getUser().getId()) || user.getRoles().contains(Role.ROLE_ADMIN)) {
                 recipeService.updateRecipe(recipeRequest, id);
                 return new ResponseEntity<>(HttpStatus.OK);
             } else {
@@ -65,7 +65,7 @@ public class RecipesController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteRecipe(Authentication authentication, @PathVariable(name = "id") Long id) {
         User user = userService.findByUsername(authentication.getName());
-        if (user.getId().equals(recipeService.findById(id).getUser().getId()) || user.getRoles().contains( Role.ROLE_ADMIN) ) {
+        if (user.getId().equals(recipeService.findById(id).getUser().getId()) || user.getRoles().contains(Role.ROLE_ADMIN)) {
             recipeService.deleteRecipe(id);
             return new ResponseEntity<>(HttpStatus.OK);
         } else {
